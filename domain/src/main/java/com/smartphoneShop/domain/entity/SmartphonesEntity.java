@@ -1,4 +1,11 @@
 package com.smartphoneShop.domain.entity;
 
-public class Smartphones {
+
+import lombok.Data;
+
+import javax.persistence.Entity;
+
+@Entity(name = "Smartphones")
+@Data
+public class SmartphonesEntity {
 }
