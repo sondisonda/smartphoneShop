@@ -3,9 +3,11 @@ package com.smartphoneShop.backend.service.implementation;
 import com.smartphoneShop.backend.dao.entity.Smartphones;
 import com.smartphoneShop.backend.repository.SmartphonesRepository;
 import com.smartphoneShop.backend.service.SmartphonesService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class SmartphonesServiceImpl implements SmartphonesService {
 
     private SmartphonesRepository smartphonesRepository;

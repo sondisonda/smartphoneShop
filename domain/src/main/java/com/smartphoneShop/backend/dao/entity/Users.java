@@ -7,12 +7,15 @@ import com.sun.istack.NotNull;
 import lombok.Data;
 
 
-@Entity(name = "User")
+@Entity(name = "Customer")
 @Data
 
 public class Users implements Serializable {
 
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Users(){
+    }
+
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private int id;
 

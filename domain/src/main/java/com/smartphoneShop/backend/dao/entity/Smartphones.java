@@ -15,7 +15,11 @@ import javax.persistence.Id;
 @Data
 public class Smartphones {
 
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    Smartphones(){
+    }
+
+   // @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private int id;
 
