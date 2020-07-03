@@ -1,4 +1,4 @@
-package com.smartphoneShop.domain.entity;
+package com.smartphoneShop.domain.dao.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -8,8 +8,9 @@ import lombok.Data;
 
 @Entity(name = "Users")
 @Data
-public class UsersEntity implements Serializable {
+public class Users implements Serializable {
 
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private int id;
 

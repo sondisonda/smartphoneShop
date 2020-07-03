@@ -1,13 +1,13 @@
-package com.smartphoneShop.domain.entity;
+package com.smartphoneShop.domain.dao.entity;
 
 import com.sun.istack.NotNull;
 import lombok.Data;
 
 import javax.persistence.Entity;
 
-@Entity(name = "OrderItems")
+//@Entity(name = "OrderItems")
 @Data
-public class OrderItemsEntity {
+public class OrderItems {
 
     @NotNull
     private int order_id;
