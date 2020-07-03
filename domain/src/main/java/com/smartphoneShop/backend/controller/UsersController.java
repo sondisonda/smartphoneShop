@@ -45,13 +45,13 @@ public class UsersController {
     }
 
     @PostMapping
-    public Users addUsers(@RequestBody Users user){
+    public Users addUser(@RequestBody Users user){
         return usersService.createUser(user);
     }
 
     @PutMapping
-    public Users updateUsers(@RequestBody Users user){
-        return usersService.updateUsers(user);
+    public Users updateUser(@RequestBody Users user){
+        return usersService.updateUser(user);
     }
 
 }

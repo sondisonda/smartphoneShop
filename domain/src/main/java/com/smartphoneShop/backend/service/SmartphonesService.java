@@ -20,13 +20,16 @@ public interface SmartphonesService {
 
     List<Smartphones> getAllSmartphones();
 
-    void addSmartphone(Smartphones smartphone);
+    Smartphones addSmartphone(Smartphones smartphone);
 
-    void editSmartphone(Smartphones smartphone, int id);
+    Smartphones editSmartphone(Smartphones smartphone);
 
     void deleteSmartphone(int id);
 
+<<<<<<< HEAD
 >>>>>>> d81b6d3... Code review things
     void sellSmartphone(int id);
 
+=======
+>>>>>>> d8256a4... Ended services
 }

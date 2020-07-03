@@ -23,7 +23,7 @@ public interface UsersService {
 
     List<Users> getAllUsers();
 
-    public void createUser(Users user);
+    public Users createUser(Users user);
 
     void deleteUser(int id);
 
