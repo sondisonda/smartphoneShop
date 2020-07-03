@@ -3,6 +3,7 @@ package com.smartphoneShop.backend.service.implementation;
 import com.smartphoneShop.backend.dao.entity.Users;
 import com.smartphoneShop.backend.repository.UsersRepository;
 import com.smartphoneShop.backend.service.UsersService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,9 +19,10 @@ public class UsersServiceImpl implements UsersService {
     private final UsersRepository usersRepository;
 >>>>>>> d81b6d3... Code review things
 
-    public UsersServiceImpl(UsersRepository userRepository) {
-        this.usersRepository = userRepository;
+    public UsersServiceImpl(UsersRepository usersRepository) {
+        this.usersRepository = usersRepository;
     }
+
 
     @Override
     public List<Users> getAllUsers() {
@@ -42,8 +44,9 @@ public class UsersServiceImpl implements UsersService {
     public Users updateUsers(Users user) {
 =======
     @Override
-    public void createUser(Users user) {
+    public Users createUser(Users user) {
         this.usersRepository.save(user);
+        return user;
     }
 
     //    To nie zawsze zadziała, zależy on kontrukcji requestów z GUI. Przegoogluj to
