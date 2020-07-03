@@ -9,11 +9,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-<<<<<<< HEAD
-@Entity(name = "Smartphones")
-=======
+
 @Entity(name = "Smartphone")
->>>>>>> d81b6d3... Code review things
+
 @Data
 public class Smartphones {
 
