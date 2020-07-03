@@ -12,17 +12,11 @@ import java.util.List;
 
 public class UsersController {
 
-
-
     UsersService usersService;
-
 
     public UsersController(UsersService usersService){
         this.usersService = usersService;
     }
-
-
-
 
     @GetMapping()
     public List<Users> getAll(){
