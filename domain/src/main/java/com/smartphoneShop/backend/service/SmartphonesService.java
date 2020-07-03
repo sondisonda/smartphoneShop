@@ -6,7 +6,8 @@ import java.util.List;
 
 
 
-
+// Formatowanie
+// Liczba pojedyńcza Smartphone
 public interface SmartphonesService {
 
     List<Smartphones> getAllSmartphones();

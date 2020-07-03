@@ -8,6 +8,7 @@ import lombok.Data;
 
 @Entity(name = "Users")
 @Data
+// User* - to jest jeden user
 public class Users implements Serializable {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -11,6 +11,7 @@ import java.util.List;
 @Service
 public class UsersServiceImpl implements UsersService {
 
+//    Możesz dodać final tutal ;)
     private UsersRepository usersRepository;
 
     public UsersServiceImpl(UsersRepository userRepository) {
@@ -23,12 +24,15 @@ public class UsersServiceImpl implements UsersService {
     }
 
 
+//    Hmm czyli jak coś pójdzie nie tak to i tak dostaniesz usera zwrotnie ?
+//    Metoda save sama zwarca obiekt ;)
     @Override
     public Users createUser(Users user) {
         this.usersRepository.save(user);
         return user;
     }
 
+//    To nie zawsze zadziała, zależy on kontrukcji requestów z GUI. Przegoogluj to
     @Override
     public Users updateUsers(Users user) {
         return usersRepository.save(user);

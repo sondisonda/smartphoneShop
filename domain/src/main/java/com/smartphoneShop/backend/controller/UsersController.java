@@ -5,13 +5,17 @@ import com.smartphoneShop.backend.service.UsersService;
 import org.springframework.web.bind.annotation.*;
 
 
-
+/*
+* Proponuje "/api/users"
+* Ułatwi ci to późniejszą autoryzcje
+ */
 @RestController
 @RequestMapping("/users")
 public class UsersController {
 
 
-
+// Czemu service jest jest wstrzykiwany ?
+//    @Autowired lub przez kontruktor
     UsersService usersService;
 
 
@@ -20,6 +24,7 @@ public class UsersController {
     }
 
     @GetMapping()
+//    List
     public Iterable<Users> getAll(){
         return usersService.getAllUsers();
     }

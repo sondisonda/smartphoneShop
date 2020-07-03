@@ -11,6 +11,7 @@ import java.security.Timestamp;
 
 @Entity(name = "Orders")
 @Data
+// Liczba pojedyńcza Order
 public class Orders {
 
 
@@ -21,6 +22,7 @@ public class Orders {
     @NotNull
     private int user_id;
 
+//   Może DATE ?
     @NotNull
     private Timestamp date;
 
@@ -28,5 +30,5 @@ public class Orders {
     private int value;
 
     @NotNull
-    private int status; //tmp enum
+    private int status; //tmp enum Dokładnie ENUM
 }
