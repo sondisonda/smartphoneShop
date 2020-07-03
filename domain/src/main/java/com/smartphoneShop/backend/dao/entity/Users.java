@@ -1,4 +1,4 @@
-package com.smartphoneShop.domain.dao.entity;
+package com.smartphoneShop.backend.dao.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -15,15 +15,15 @@ public class Users implements Serializable {
     private int id;
 
     @NotNull
-    private String username;
+    private String userName;
 
     @NotNull
     private String password;
 
     @NotNull
-    private String name;
+    private String firstName;
 
     @NotNull
-    private String lastname;
+    private String lastName;
 
 }

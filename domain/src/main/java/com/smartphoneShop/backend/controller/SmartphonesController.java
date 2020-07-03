@@ -1,4 +1,4 @@
-package com.smartphoneShop.backend.api;
+package com.smartphoneShop.backend.controller;
 
-public class SmartphonesApi {
+public class SmartphonesController {
 }

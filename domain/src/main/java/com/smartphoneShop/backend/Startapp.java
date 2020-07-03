@@ -1,4 +1,4 @@
-package com.smartphoneShop.domain;
+package com.smartphoneShop.backend;
 
 
 import org.springframework.boot.SpringApplication;

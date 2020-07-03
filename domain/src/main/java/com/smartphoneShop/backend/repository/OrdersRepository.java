@@ -1,9 +1,9 @@
 package com.smartphoneShop.backend.repository;
 
-import com.smartphoneShop.backend.dao.entity.Users;
+import com.smartphoneShop.backend.dao.entity.Orders;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
-public interface UsersRepository extends JpaRepository<Users, Integer> {
+public interface OrdersRepository extends JpaRepository<Orders, Integer> {
 
 }

@@ -1,4 +1,14 @@
 package com.smartphoneShop.backend.dao.dto;
 
-public class UsersDto {
+import com.sun.istack.NotNull;
+import lombok.Data;
+
+@Data
+public class SmartphonesDto {
+
+    private int id;
+    private String brand;
+    private String model;
+    private int prize;
+    private int stock;
 }

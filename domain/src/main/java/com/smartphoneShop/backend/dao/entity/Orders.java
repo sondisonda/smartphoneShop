@@ -1,4 +1,4 @@
-package com.smartphoneShop.domain.dao.entity;
+package com.smartphoneShop.backend.dao.entity;
 
 import com.sun.istack.NotNull;
 import lombok.Data;
@@ -9,7 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.security.Timestamp;
 
-//@Entity(name = "Orders")
+@Entity(name = "Orders")
 @Data
 public class Orders {
 

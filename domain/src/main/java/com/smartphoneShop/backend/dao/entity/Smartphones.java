@@ -1,4 +1,4 @@
-package com.smartphoneShop.domain.dao.entity;
+package com.smartphoneShop.backend.dao.entity;
 
 
 import com.sun.istack.NotNull;
@@ -9,7 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-//@Entity(name = "Smartphones")
+@Entity(name = "Smartphones")
 @Data
 public class Smartphones {
 

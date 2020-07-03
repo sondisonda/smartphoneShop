@@ -1,4 +1,4 @@
-package com.smartphoneShop.domain;
+package com.smartphoneShop.backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
