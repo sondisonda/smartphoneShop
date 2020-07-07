@@ -5,10 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
-import {MatButtonModule} from '@angular/material/button';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NavComponent } from './nav/nav.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -16,7 +16,8 @@ import { NavComponent } from './nav/nav.component';
       AppComponent,
       LoginComponent,
       RegisterComponent,
-      NavComponent
+      NavComponent,
+      HomeComponent
    ],
    imports: [
       BrowserModule,
