@@ -12,9 +12,12 @@ public interface UsersService {
     Users createUser(Users user);
 
 
-    void deleteUser(int id);
+    void deleteById(int id);
 
     Users updateUser(Users user);
+
+    public Users findById(Integer id) throws Exception;
+
 }
 
 

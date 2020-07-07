@@ -23,6 +23,11 @@ public class UsersController {
         return usersService.getAllUsers();
     }
 
+    @GetMapping("/byId")
+    public Users getById(@RequestParam Integer index) throws Exception{
+        return usersService.findById(index);
+    }
+
     @PostMapping
     public Users addUser(@RequestBody Users user){
         return usersService.createUser(user);
@@ -31,6 +36,11 @@ public class UsersController {
     @PutMapping
     public Users updateUser(@RequestBody Users user){
         return usersService.updateUser(user);
+    }
+
+    @DeleteMapping
+    public void deleteUsers(@RequestParam int index){
+        usersService.deleteById(index);
     }
 
 }

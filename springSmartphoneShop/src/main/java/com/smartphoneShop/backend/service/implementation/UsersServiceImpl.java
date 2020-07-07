@@ -33,6 +33,10 @@ public class UsersServiceImpl implements UsersService {
         return user;
     }
 
+    @Override
+    public Users findById(Integer id) throws Exception{
+        return usersRepository.findById(id).orElseThrow(Exception::new);
+    }
 
     @Override
     public Users updateUser(Users user) {
@@ -41,7 +45,7 @@ public class UsersServiceImpl implements UsersService {
 
 
     @Override
-    public void deleteUser(int id) {
+    public void deleteById(int id) {
         this.usersRepository.deleteById(id);
     }
 }
