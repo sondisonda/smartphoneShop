@@ -9,15 +9,14 @@ public interface UsersService {
 
     List<Users> getAllUsers();
 
-    Users createUser(Users user);
-
-
     void deleteById(int id);
 
     Users updateUser(Users user);
 
     public Users findById(Integer id) throws Exception;
 
+    public Users addUser(Users user);
 }
+
 
 

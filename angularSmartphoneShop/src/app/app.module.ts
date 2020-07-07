@@ -10,7 +10,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
-
+import { routingComponents} from './app-routing.module';
 
 @NgModule({
    declarations: [
@@ -19,13 +19,14 @@ import { ProfileComponent } from './components/profile/profile.component';
       RegisterComponent,
       NavComponent,
       HomeComponent,
-      ProfileComponent
+      ProfileComponent,
+      routingComponents,
    ],
    imports: [
       BrowserModule,
       AppRoutingModule,
-      BrowserAnimationsModule,
-      MatSliderModule
+      BrowserAnimationsModule
+     
    ],
    providers: [],
    bootstrap: [
