@@ -8,12 +8,12 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-
+// Formatowanie
 @Service
 public class UsersServiceImpl implements UsersService {
 
 
-
+    //     powtarzasz to w kontruktorze, privat final. Poczytaj o wstrzykiwaniu zależności
     @Autowired
     private UsersRepository usersRepository;
 

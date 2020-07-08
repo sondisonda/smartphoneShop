@@ -7,10 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+// Formatowanie
 @Service
 public class SmartphonesServiceImpl implements SmartphonesService {
 
+//     powtarzasz to w kontruktorze, privat final. Poczytaj o wstrzykiwaniu zależności
     @Autowired
     private SmartphonesRepository smartphonesRepository;
 

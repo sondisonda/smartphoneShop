@@ -7,7 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.Date;
 
-
+//Formatowanie
 @Entity(name = "Basket")
 @Data
 public class Orders {
@@ -16,11 +16,12 @@ public class Orders {
     Orders(){
     }
 
-
+// Co tu się stało?
     //@GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private int id;
 
+//    tu chyba miała być relacja ?
     @NotNull
     private int user_id;
 

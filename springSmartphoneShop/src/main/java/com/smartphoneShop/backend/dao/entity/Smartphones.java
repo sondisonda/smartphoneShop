@@ -3,13 +3,14 @@ package com.smartphoneShop.backend.dao.entity;
 
 import com.sun.istack.NotNull;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
+//Formatowanie
 @Entity(name = "Smartphone")
 
 @Data
@@ -19,6 +20,7 @@ public class Smartphones {
     Smartphones(){
     }
 
+    // Co tu się stało?
    // @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private int id;
