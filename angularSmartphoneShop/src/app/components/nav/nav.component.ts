@@ -17,7 +17,7 @@ export class NavComponent implements OnInit {
   }
 
 
-  loggedIN() {
+  login() {
     this.loginMode = true;
   }
 
