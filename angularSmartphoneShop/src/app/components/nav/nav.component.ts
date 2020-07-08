@@ -5,9 +5,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css']
 })
+// NavigationComponent
 export class NavComponent implements OnInit {
 
-
+// private 
   loginMode = true;
 
 

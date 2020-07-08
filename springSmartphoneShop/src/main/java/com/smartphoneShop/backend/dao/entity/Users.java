@@ -6,7 +6,7 @@ import java.io.Serializable;
 import com.sun.istack.NotNull;
 import lombok.Data;
 
-
+// Formatowanie
 @Entity(name = "Customer")
 @Data
 

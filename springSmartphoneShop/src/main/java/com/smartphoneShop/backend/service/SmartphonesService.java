@@ -5,7 +5,6 @@ import com.smartphoneShop.backend.dao.entity.Smartphones;
 import java.util.List;
 
 
-// Formatowanie
 // Liczba pojedyńcza Smartphone
 public interface SmartphonesService {
 

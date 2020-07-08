@@ -11,7 +11,7 @@ public interface UsersService {
     void deleteById(int id);
 
     Users updateUser(Users user);
-
+// nie musi być public ;)
     public Users findById(Integer id) throws Exception;
 
     public Users addUser(Users user);

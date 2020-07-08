@@ -6,7 +6,7 @@ import com.smartphoneShop.backend.service.OrdersService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+// Może się da globalnie ustawić?
 @CrossOrigin(origins = "http://localhost:4200")
 
 @RestController
