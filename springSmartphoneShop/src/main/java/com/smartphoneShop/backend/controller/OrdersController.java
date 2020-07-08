@@ -7,14 +7,16 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:4200")
+
 @RestController
 @RequestMapping("api/orders")
-public class OrdesController {
+public class OrdersController {
 
     OrdersService ordersService;
 
 
-    public OrdesController(OrdersService ordersService){
+    public OrdersController(OrdersService ordersService){
         this.ordersService = ordersService;
     }
 

@@ -7,9 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
+
+  loginMode = true;
+
+
   constructor() { }
 
   ngOnInit() {
   }
+
+
+  loggedIN() {
+    this.loginMode = true;
+  }
+
+
+  logout() {
+    this.loginMode = false;
+
+  }
+
 
 }
