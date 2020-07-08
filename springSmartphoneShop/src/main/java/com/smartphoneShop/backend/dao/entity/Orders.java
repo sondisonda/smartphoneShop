@@ -2,26 +2,27 @@ package com.smartphoneShop.backend.dao.entity;
 
 import com.sun.istack.NotNull;
 import lombok.Data;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Date;
 
-//Formatowanie
-@Entity(name = "Basket")
+@Entity(name = "Order")
 @Data
 public class Orders {
 
 
-    Orders(){
+    Orders() {
     }
 
-// Co tu się stało?
-    //@GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private int id;
 
-//    tu chyba miała być relacja ?
+    //    tu chyba miała być relacja ?
     @NotNull
     private int user_id;
 
@@ -32,6 +33,6 @@ public class Orders {
     @NotNull
     private int value;
 
-   // @NotNull
-   // private int status; //tmp enum Dokładnie ENUM
+    // @NotNull
+    // private int status; //tmp enum Dokładnie ENUM
 }

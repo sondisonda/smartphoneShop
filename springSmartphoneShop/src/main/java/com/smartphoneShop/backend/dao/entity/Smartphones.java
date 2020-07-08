@@ -17,11 +17,11 @@ import javax.persistence.Id;
 public class Smartphones {
 
 
-    Smartphones(){
+    Smartphones() {
     }
 
-    // Co tu się stało?
-   // @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private int id;
 

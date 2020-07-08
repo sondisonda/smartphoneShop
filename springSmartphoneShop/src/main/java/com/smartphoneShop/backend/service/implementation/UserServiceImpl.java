@@ -2,7 +2,7 @@ package com.smartphoneShop.backend.service.implementation;
 
 import com.smartphoneShop.backend.dao.entity.Users;
 import com.smartphoneShop.backend.repository.UsersRepository;
-import com.smartphoneShop.backend.service.UsersService;
+import com.smartphoneShop.backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,14 +10,14 @@ import java.util.List;
 
 // Formatowanie
 @Service
-public class UsersServiceImpl implements UsersService {
+public class UserServiceImpl implements UserService {
 
 
     //     powtarzasz to w kontruktorze, privat final. Poczytaj o wstrzykiwaniu zależności
     @Autowired
     private UsersRepository usersRepository;
 
-    public UsersServiceImpl(UsersRepository usersRepository) {
+    public UserServiceImpl(UsersRepository usersRepository) {
         this.usersRepository = usersRepository;
     }
 
@@ -28,7 +28,7 @@ public class UsersServiceImpl implements UsersService {
     }
 
     @Override
-    public Users findById(Integer id) throws Exception{
+    public Users findById(Integer id) throws Exception {
         return usersRepository.findById(id).orElseThrow(Exception::new);
     }
 

@@ -5,8 +5,7 @@ import com.smartphoneShop.backend.dao.entity.Smartphones;
 import java.util.List;
 
 
-// Liczba pojedyńcza Smartphone
-public interface SmartphonesService {
+public interface SmartphoneService {
 
     List<Smartphones> getAllSmartphones();
 

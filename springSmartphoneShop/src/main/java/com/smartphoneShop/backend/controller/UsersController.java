@@ -1,7 +1,7 @@
 package com.smartphoneShop.backend.controller;
 
 import com.smartphoneShop.backend.dao.entity.Users;
-import com.smartphoneShop.backend.service.UsersService;
+import com.smartphoneShop.backend.service.UserService;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
@@ -11,39 +11,39 @@ import java.util.List;
 @RequestMapping("api/users")
 
 public class UsersController {
-// private final ?
-    UsersService usersService;
 
-    public UsersController(UsersService usersService){
-        this.usersService = usersService;
+    private final UserService userService;
+
+    public UsersController(UserService usersService){
+        this.userService = usersService;
     }
 
     @GetMapping()
     public List<Users> getAll(){
-        return usersService.getAllUsers();
+        return userService.getAllUsers();
     }
 
     //    Id w path
     @GetMapping("/byId")
     public Users getById(@RequestParam Integer index) throws Exception{
-        return usersService.findById(index);
+        return userService.findById(index);
     }
 
     @PostMapping
     public Users addUser(@RequestBody Users user){
-        return usersService.addUser(user);
+        return userService.addUser(user);
     }
 
     //    Id w path
     @PutMapping
     public Users updateUser(@RequestBody Users user){
-        return usersService.updateUser(user);
+        return userService.updateUser(user);
     }
 
 //    Id w path
     @DeleteMapping
     public void deleteUsers(@RequestParam int index){
-        usersService.deleteById(index);
+        userService.deleteById(index);
     }
 
 }

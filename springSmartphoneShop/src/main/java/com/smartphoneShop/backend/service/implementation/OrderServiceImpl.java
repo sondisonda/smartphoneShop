@@ -2,19 +2,19 @@ package com.smartphoneShop.backend.service.implementation;
 
 import com.smartphoneShop.backend.dao.entity.Orders;
 import com.smartphoneShop.backend.repository.OrdersRepository;
-import com.smartphoneShop.backend.service.OrdersService;
+import com.smartphoneShop.backend.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class OrdersServiceImpl implements OrdersService {
+public class OrderServiceImpl implements OrderService {
 
     @Autowired
     private  OrdersRepository ordersRepository;
 
-    public OrdersServiceImpl(OrdersRepository ordersRepository) {
+    public OrderServiceImpl(OrdersRepository ordersRepository) {
         this.ordersRepository = ordersRepository;
     }
 

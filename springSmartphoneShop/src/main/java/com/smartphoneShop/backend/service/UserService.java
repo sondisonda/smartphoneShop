@@ -4,15 +4,15 @@ import com.smartphoneShop.backend.dao.entity.Users;
 
 import java.util.List;
 
-public interface UsersService {
+public interface UserService {
 
     List<Users> getAllUsers();
 
     void deleteById(int id);
 
     Users updateUser(Users user);
-// nie musi być public ;)
-    public Users findById(Integer id) throws Exception;
+
+    Users findById(Integer id) throws Exception;
 
     public Users addUser(Users user);
 }

@@ -2,7 +2,7 @@ package com.smartphoneShop.backend.controller;
 
 
 import com.smartphoneShop.backend.dao.entity.Smartphones;
-import com.smartphoneShop.backend.service.SmartphonesService;
+import com.smartphoneShop.backend.service.SmartphoneService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,27 +11,27 @@ import java.util.List;
 @RestController
 @RequestMapping("api/smartphones")
 public class SmartphonesController {
-// private final ?
-    SmartphonesService smartphonesService;
+
+    private final SmartphoneService smartphoneService;
 
 
-    public SmartphonesController(SmartphonesService smartphonesService){
-        this.smartphonesService = smartphonesService;
+    public SmartphonesController(SmartphoneService smartphonesService){
+        this.smartphoneService = smartphonesService;
     }
 
     @GetMapping()
     public List<Smartphones> getAllSmartphones(){
-        return smartphonesService.getAllSmartphones();
+        return smartphoneService.getAllSmartphones();
     }
 
     @PostMapping
     public Smartphones addSmartphone(@RequestBody Smartphones smartphone){
-        return smartphonesService.addSmartphone(smartphone);
+        return smartphoneService.addSmartphone(smartphone);
     }
 
     @PutMapping
     public Smartphones editSmartphone(@RequestBody Smartphones smartphone){
-        return smartphonesService.editSmartphone(smartphone);
+        return smartphoneService.editSmartphone(smartphone);
     }
 
 

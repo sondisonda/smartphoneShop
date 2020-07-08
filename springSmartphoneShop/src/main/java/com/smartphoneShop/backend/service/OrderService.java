@@ -4,7 +4,7 @@ import com.smartphoneShop.backend.dao.entity.Orders;
 
 import java.util.List;
 
-public interface OrdersService {
+public interface OrderService {
 
     List<Orders> getAllOrders();
 

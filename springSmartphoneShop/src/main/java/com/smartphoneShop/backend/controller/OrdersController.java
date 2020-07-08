@@ -2,7 +2,7 @@ package com.smartphoneShop.backend.controller;
 
 
 import com.smartphoneShop.backend.dao.entity.Orders;
-import com.smartphoneShop.backend.service.OrdersService;
+import com.smartphoneShop.backend.service.OrderService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -13,21 +13,21 @@ import java.util.List;
 @RequestMapping("api/orders")
 public class OrdersController {
 
-    OrdersService ordersService;
+    OrderService orderService;
 
 
-    public OrdersController(OrdersService ordersService){
-        this.ordersService = ordersService;
+    public OrdersController(OrderService ordersService){
+        this.orderService = ordersService;
     }
 
     @GetMapping()
     public List<Orders> getAllOrders(){
-        return ordersService.getAllOrders();
+        return orderService.getAllOrders();
     }
 
     @PostMapping
     public Orders addOrder(@RequestBody Orders order){
-        return ordersService.addOrder(order);
+        return orderService.addOrder(order);
     }
 
 }

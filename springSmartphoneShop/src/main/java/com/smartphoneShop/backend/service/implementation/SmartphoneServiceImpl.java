@@ -2,20 +2,19 @@ package com.smartphoneShop.backend.service.implementation;
 
 import com.smartphoneShop.backend.dao.entity.Smartphones;
 import com.smartphoneShop.backend.repository.SmartphonesRepository;
-import com.smartphoneShop.backend.service.SmartphonesService;
+import com.smartphoneShop.backend.service.SmartphoneService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-// Formatowanie
+//
 @Service
-public class SmartphonesServiceImpl implements SmartphonesService {
+public class SmartphoneServiceImpl implements SmartphoneService {
 
-//     powtarzasz to w kontruktorze, privat final. Poczytaj o wstrzykiwaniu zależności
-    @Autowired
-    private SmartphonesRepository smartphonesRepository;
 
-    public SmartphonesServiceImpl(SmartphonesRepository smartphonesRepository) {
+    private final SmartphonesRepository smartphonesRepository;
+
+    public SmartphoneServiceImpl(SmartphonesRepository smartphonesRepository) {
         this.smartphonesRepository = smartphonesRepository;
     }
 
