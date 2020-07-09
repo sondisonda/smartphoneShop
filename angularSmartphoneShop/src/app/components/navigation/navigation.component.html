@@ -31,10 +31,12 @@
       </li>
     </ul>
     <form *ngIf="!loginMode"  [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-      <input formControlName="loginForm"  type="text" placeholder="username">
-      <input formControlName="loginForm"  type="password" placeholder="password">
+      <input formControlName="username"  type="text" placeholder="username">
+      <input formControlName="password"  type="password" placeholder="password">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log in</button>
     </form>
   </div>
   <hr>
 </nav> 
+<hr>
+<hr>

@@ -7,24 +7,20 @@ import { FormBuilder } from '@angular/forms';
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
-export class ProfileComponent {
+export class ProfileComponent  implements OnInit{
   profileForm = this.fb.group({
-    firstName: ['', ],
-    lastName: [''],
-    address: this.fb.group({
-      street: [''],
-      city: [''],
-      state: [''],
-      zip: ['']
-    }),
-    aliases: this.fb.array([
-      this.fb.control('')
-    ])
+    userName: ['' ],
+    password: [''],
+    firstName: [''],
+    lastName: ['']
+
   });
 
 
   constructor(private fb: FormBuilder) { }
-
+  
+  ngOnInit() {
+  }
 
   updateProfile() {
     this.profileForm.patchValue({
