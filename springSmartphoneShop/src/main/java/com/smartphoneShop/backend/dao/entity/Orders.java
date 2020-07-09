@@ -1,12 +1,9 @@
 package com.smartphoneShop.backend.dao.entity;
 
+import com.smartphoneShop.backend.dao.enums.Status;
 import com.sun.istack.NotNull;
 import lombok.Data;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity(name = "Order")
@@ -33,6 +30,7 @@ public class Orders {
     @NotNull
     private int value;
 
-    // @NotNull
-    // private int status; //tmp enum Dokładnie ENUM
+    @Enumerated(value = EnumType.STRING)
+    private Status status;// @NotNull
+
 }

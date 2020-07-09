@@ -1,15 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-nav',
-  templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.css']
+  selector: 'app-navigation',
+  templateUrl: './navigation.component.html',
+  styleUrls: ['./navigation.component.css']
 })
-// NavigationComponent
-export class NavComponent implements OnInit {
+export class NavigationComponent implements OnInit {
 
-// private 
-  loginMode = true;
+private loginMode = true;
 
 
   constructor() { }

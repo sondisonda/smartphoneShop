@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-import { NavComponent } from './components/nav/nav.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { routingComponents} from './app-routing.module';
@@ -20,7 +20,7 @@ import { StartPageComponent } from './start-page/start-page.component';
       AppComponent,
       LoginComponent,
       RegisterComponent,
-      NavComponent,
+      NavigationComponent,
       HomeComponent,
       ProfileComponent,
       OrderComponent,

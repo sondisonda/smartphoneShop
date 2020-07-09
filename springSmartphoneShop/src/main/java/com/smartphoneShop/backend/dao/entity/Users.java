@@ -3,6 +3,7 @@ package com.smartphoneShop.backend.dao.entity;
 import javax.persistence.*;
 import java.io.Serializable;
 
+import com.smartphoneShop.backend.dao.enums.RoleType;
 import com.sun.istack.NotNull;
 import lombok.Data;
 
@@ -31,4 +32,6 @@ public class Users implements Serializable {
     @NotNull
     private String lastName;
 
+    @Enumerated(value = EnumType.STRING)
+    private RoleType roleType;
 }
