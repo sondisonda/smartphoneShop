@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators, FormControl, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-profile',
@@ -17,9 +16,19 @@ export class ProfileComponent  implements OnInit{
   });
 
 
+  user = { userName: '', password: '', firstName: '', lastName: '' };
+
+
+
   constructor(private fb: FormBuilder) { }
   
-  ngOnInit() {
+  ngOnInit(): void {
+    this.profileForm = new FormGroup({
+      'userName': new FormControl(this.user.userName, [
+        Validators.required,
+        Validators.minLength(4),
+      ]),
+    }); // <-- add custom validator at the FormGroup level
   }
 
   updateProfile() {
