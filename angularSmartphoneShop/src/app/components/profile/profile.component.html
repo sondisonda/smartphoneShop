@@ -1,22 +1,17 @@
-<form>
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
   <hr>
- <h2 class ="text-primay">Profile</h2>
- <hr>
- <div class="form-group">
-   <input type="text" class="form-control" placeholder="Username">
- </div>
-   <div class="form-group">
- <input type="password" class="form-control" placeholder="Password"> 
-   </div>
-   <div class="form-group">
-    <input type="text" class="form-control" placeholder="Firstname"> 
-      </div>
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Lastname"> 
-          </div>
-   <div class="form-group text-center">
-     <button class="btn btn-success" type="submit" >Accept</button>
-     <button class="button btn - default" type="button" >Cancel</button>
-       </div>
- </form>
- 
+  <hr>
+  <label>
+    First Name:
+    <input type="text" formControlName="firstName" required>
+  </label>
+
+  <div>
+    Last Name:
+    <input type="text" formControlName="lastName">
+  </div>
+
+
+  <button type="submit" >Submit</button>
+</form>

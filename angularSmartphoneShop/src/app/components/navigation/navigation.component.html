@@ -14,7 +14,7 @@
 
     <ul *ngIf="!loginMode" class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="startpage">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="startpage">Start <span class="sr-only">(current)</span></a>
       </li>
     </ul>
 
@@ -30,10 +30,9 @@
         <button class="btn btn-primary btn mr-3" (click)="logout()">Logout</button>
       </li>
     </ul>
-
-    <form *ngIf="!loginMode" class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="username">
-      <input class="form-control mr-sm-2" type="password" placeholder="password"> 
+    <form *ngIf="!loginMode"  [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <input formControlName="loginForm"  type="text" placeholder="username">
+      <input formControlName="loginForm"  type="password" placeholder="password">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log in</button>
     </form>
   </div>

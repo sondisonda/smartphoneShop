@@ -13,6 +13,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { routingComponents} from './app-routing.module';
 import { OrderComponent } from './components/order/order.component';
 import { StartPageComponent } from './start-page/start-page.component';
+
 //  Uporządkuj sobie foldery, komponenty które będziesz używał w większej ilości miejsc możesz wrzucić do katalogu
 // commons 
 @NgModule({
@@ -30,7 +31,9 @@ import { StartPageComponent } from './start-page/start-page.component';
    imports: [
       BrowserModule,
       AppRoutingModule,
-      BrowserAnimationsModule
+      BrowserAnimationsModule,
+      ReactiveFormsModule
+
    ],
    providers: [],
    bootstrap: [

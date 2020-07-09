@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FormControl } from '@angular/forms';
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
