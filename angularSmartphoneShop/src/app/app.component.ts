@@ -8,8 +8,5 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent {
   title = 'Smartphone Shop';
-  constructor(private _translate: TranslateService) {
-    _translate.setDefaultLang('pl');
-}
 
 }
