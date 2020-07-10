@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
-import {FormGroup, FormBuilder} from '@angular/forms';
+import { Component, OnInit, Input, Inject } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-login',
@@ -8,17 +8,34 @@ import {FormGroup, FormBuilder} from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  constructor( private formBuilder: FormBuilder, private router: Router) {
+
+
+ 
+  private username = '';
+  private password = '';
+
+  private loginWarn = '';
+  private loginForm: FormGroup;
+
+
+  constructor(private formBuilder: FormBuilder) {
+    this.createForm();
   }
 
-  loginForm: FormGroup;
 
   ngOnInit() {
+ 
+  }
+
+
+  createForm() {
     this.loginForm = this.formBuilder.group({
-      username: [''],
-      password: ['']
+      username: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(12), Validators.pattern('[a-zA-Z0-9]+([._]?[a-zA-Z0-9]+)')]],
+      password: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(12), Validators.pattern('[a-zA-Z0-9]+([._]?[a-zA-Z0-9]+)')]]
     });
   }
+
+
 
   get f() {
     return this.loginForm.controls;

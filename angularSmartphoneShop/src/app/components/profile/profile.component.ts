@@ -1,40 +1,31 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators, FormControl, FormGroup} from '@angular/forms';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {FormGroup, FormBuilder} from '@angular/forms';
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
-export class ProfileComponent  implements OnInit{
-  profileForm = this.fb.group({
-    userName: ['' ],
-    password: [''],
-    firstName: [''],
-    lastName: ['']
-
-  });
-
-
-
-
-  constructor(private fb: FormBuilder) { }
-  
-  ngOnInit() {
+export class ProfileComponent implements OnInit {
+  constructor( private formBuilder: FormBuilder, private router: Router) {
   }
 
-  updateProfile() {
-    this.profileForm.patchValue({
-      firstName: 'Nancy',
-      address: {
-        street: '123 Drew Street'
-      }
+  profileForm: FormGroup;
+
+  ngOnInit() {
+    this.profileForm = this.formBuilder.group({
+      username: [''],
+      password: ['']
     });
   }
 
+  get f() {
+    return this.profileForm.controls;
+  }
 
-  onSubmit() {
-    // TODO: Use EventEmitter with form value
-    console.warn(this.profileForm.value);
+  login() {
+    console.log('Logowanie');
+
   }
 }

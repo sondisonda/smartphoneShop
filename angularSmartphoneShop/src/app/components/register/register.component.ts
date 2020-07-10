@@ -11,17 +11,17 @@ export class RegisterComponent implements OnInit {
   constructor( private formBuilder: FormBuilder, private router: Router) {
   }
 
-  loginForm: FormGroup;
+  registerForm: FormGroup;
 
   ngOnInit() {
-    this.loginForm = this.formBuilder.group({
+    this.registerForm = this.formBuilder.group({
       username: [''],
       password: ['']
     });
   }
 
   get f() {
-    return this.loginForm.controls;
+    return this.registerForm.controls;
   }
 
   login() {

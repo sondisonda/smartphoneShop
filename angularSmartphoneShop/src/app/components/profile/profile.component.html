@@ -1,29 +1,31 @@
-<div class="container">
-<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-  <hr>
- <h2 class ="text-center text-primay">Profile</h2>
- <hr>
-
- <div class="form-group">
-   Username
-    <input type="text" formControlName="userName" class="form-control" placeholder="Username">
- </div>
-
-   <div class="form-group">
-     Password
- <input type="password" formControlName="password" class="form-control" placeholder="password"> 
-   </div>
-   <div class="form-group">
-    Firstname
-     <input type="text" formControlName="firstName" class="form-control" placeholder="Username">
+<mat-card-header>
+  <div class="header center">
+    <mat-card-title>Login</mat-card-title>
   </div>
-  <div class="form-group">
-    Lastname
-     <input type="text" formControlName="lastName" class="form-control" placeholder="Username">
-  </div>
-   <div class="form-group text-center">
-     <button class="btn btn-success" type="submit" >Submit</button>
-     <button class="btn btn-default" type="button" >Cancel</button>
-       </div>
- </form>
- </div>
+</mat-card-header>
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+  <mat-card-content>
+    <table cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field appearance="outline">
+            <input matInput type="text" id="username" placeholder="Username" autocomplete="off"
+                   formControlName="username" required >
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td>
+            <mat-form-field appearance="outline">
+            <input matInput type="password" id="password" placeholder="Password" formControlName="password" required>
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+  </mat-card-content>
+  <mat-card-actions>
+    <div class="actions">
+      <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">LOG IN</button>
+    </div>
+  </mat-card-actions>
+</form>

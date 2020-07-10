@@ -1,9 +1,9 @@
 <mat-card-header>
   <div class="header center">
-    <mat-card-title>Login</mat-card-title>
+    <mat-card-title>Register</mat-card-title>
   </div>
 </mat-card-header>
-<form [formGroup]="loginForm" (ngSubmit)="login()">
+<form [formGroup]="registerForm" (ngSubmit)="login()">
   <mat-card-content>
     <table cellspacing="0">
       <tr>
@@ -25,7 +25,7 @@
   </mat-card-content>
   <mat-card-actions>
     <div class="actions">
-      <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">LOG IN</button>
+      <button mat-raised-button color="primary" type="submit" [disabled]="!registerForm.valid">LOG IN</button>
     </div>
   </mat-card-actions>
 </form>
