@@ -6,8 +6,8 @@
     <h1>Get a perfect smartphone</h1>
     <p class="lead">Compare and order... but first register!</p>
     <div class="text-center">
-      <button class="btn btn-primary btn-lg mr-3" (click)="registerToggle()">Register</button>
-      <button class="btn btn-info btn-lg">more...</button>
+      <button mat-raised-button color="primary" (click)="registerToggle()">Sign up</button>
+      <button mat-raised-button color="primary" (click)="loginToggle()">Sign in</button>
     </div>
   </div>
 
@@ -18,5 +18,12 @@
     <app-register></app-register>
     </div>
   </div>
+</div>
+<div *ngIf="loginMode" class="container">
+  <div class="row justify-content-center">
+    <div class="col-4">
+  <app-login></app-login>
+  </div>
+</div>
 </div>
 </div>

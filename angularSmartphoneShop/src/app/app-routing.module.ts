@@ -14,7 +14,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'order', component: OrderComponent},
-  {path: 'startpage', component: StartPageComponent},
+  {path: 'start-page', component: StartPageComponent},
   {path: 'register', component: RegisterComponent}
 
 ];

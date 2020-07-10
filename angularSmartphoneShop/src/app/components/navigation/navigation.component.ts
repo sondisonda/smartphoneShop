@@ -7,7 +7,7 @@ import { FormControl } from '@angular/forms';
 })
 export class NavigationComponent implements OnInit {
 
-private loginMode = true;
+private loginMode = false;
 
 
   constructor() { }

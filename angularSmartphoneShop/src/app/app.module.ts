@@ -15,6 +15,7 @@ import { StartPageComponent } from './start-page/start-page.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import {MatListModule} from '@angular/material/list';
+import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCheckboxModule} from '@angular/material/checkbox';
@@ -59,6 +60,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       HttpClientModule,
       MatListModule,
       MatToolbarModule,
+      MatSidenavModule,
+
       MatFormFieldModule,
       MatCheckboxModule,
       MatTableModule,

@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
-
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {FormGroup, FormBuilder} from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -9,23 +8,24 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  registerForm = this.fb.group({
-    username: ['' ],
-    password: [''],
-     });
-
-
-  constructor(private fb: FormBuilder) { }
-  
-  ngOnInit() {
+  constructor( private formBuilder: FormBuilder, private router: Router) {
   }
 
+  loginForm: FormGroup;
 
+  ngOnInit() {
+    this.loginForm = this.formBuilder.group({
+      username: [''],
+      password: ['']
+    });
+  }
 
- 
+  get f() {
+    return this.loginForm.controls;
+  }
 
-  onSubmit() {
-    // TODO: Use EventEmitter with form value
-    console.warn(this.registerForm.value);
+  login() {
+    console.log('Logowanie');
+
   }
 }

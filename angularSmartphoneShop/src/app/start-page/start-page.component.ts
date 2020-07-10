@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class StartPageComponent implements OnInit {
 // private
   registerMode = false;
+  loginMode = false;
 
   constructor() { }
 
@@ -18,10 +19,14 @@ export class StartPageComponent implements OnInit {
 
   registerToggle() {
     this.registerMode = true;
+    this.loginMode = false;
+
   }
 
-  cancelRegisterMode(registerMode: boolean) {
-    this.registerMode = registerMode;
+  loginToggle() {
+    this.loginMode = true;
+    this.registerMode = false;
+
   }
 
 }
