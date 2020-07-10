@@ -16,19 +16,11 @@ export class ProfileComponent  implements OnInit{
   });
 
 
-  user = { userName: '', password: '', firstName: '', lastName: '' };
-
 
 
   constructor(private fb: FormBuilder) { }
   
-  ngOnInit(): void {
-    this.profileForm = new FormGroup({
-      'userName': new FormControl(this.user.userName, [
-        Validators.required,
-        Validators.minLength(4),
-      ]),
-    }); // <-- add custom validator at the FormGroup level
+  ngOnInit() {
   }
 
   updateProfile() {

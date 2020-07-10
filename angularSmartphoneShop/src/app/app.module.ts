@@ -14,6 +14,21 @@ import { OrderComponent } from './components/order/order.component';
 import { StartPageComponent } from './start-page/start-page.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import {MatListModule} from '@angular/material/list';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
+import {MatIconModule, MatInputModule} from '@angular/material';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatDialogModule} from '@angular/material/dialog';
+import {A11yModule} from '@angular/cdk/a11y';
+import {MatSelectModule} from '@angular/material/select';
 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
@@ -40,6 +55,26 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       AppRoutingModule,
       BrowserAnimationsModule,
       ReactiveFormsModule,
+      BrowserModule,
+      HttpClientModule,
+      MatListModule,
+      MatToolbarModule,
+      MatFormFieldModule,
+      MatCheckboxModule,
+      MatTableModule,
+      MatPaginatorModule,
+      BrowserAnimationsModule,
+      MatSortModule,
+      MatInputModule,
+      MatMenuModule,
+      MatIconModule,
+      MatButtonModule,
+      MatCardModule,
+      MatProgressSpinnerModule,
+      MatDialogModule,
+      ReactiveFormsModule,
+      A11yModule,
+      MatSelectModule,
       TranslateModule.forRoot({
          loader: {
              provide: TranslateLoader,
