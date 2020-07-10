@@ -10,7 +10,7 @@
         <td>
           <mat-form-field appearance="outline">
             <input matInput type="text" id="username" placeholder="Username" autocomplete="off"
-                   formControlName="username" required >
+                   formControlName="userName" required >
           </mat-form-field>
         </td>
       </tr>
@@ -21,11 +21,27 @@
           </mat-form-field>
         </td>
       </tr>
+      <tr>
+        <td>
+          <mat-form-field appearance="outline">
+            <input matInput type="text" id="firstName" placeholder="Firstname" autocomplete="off"
+                   formControlName="firstName" required >
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <mat-form-field appearance="outline">
+            <input matInput type="text" id="lastName" placeholder="Lastname" autocomplete="off"
+                   formControlName="lastName" required >
+          </mat-form-field>
+        </td>
+      </tr>
     </table>
   </mat-card-content>
   <mat-card-actions>
     <div class="actions">
-      <button mat-raised-button color="primary" type="submit" [disabled]="!registerForm.valid">LOG IN</button>
+      <button mat-raised-button color="primary" type="submit" [disabled]="!registerForm.valid">Register</button>
     </div>
   </mat-card-actions>
 </form>

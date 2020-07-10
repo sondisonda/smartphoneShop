@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
-import {FormGroup, FormBuilder} from '@angular/forms';
+import { Component, OnInit, Input, Inject } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-register',
@@ -8,17 +8,38 @@ import {FormGroup, FormBuilder} from '@angular/forms';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  constructor( private formBuilder: FormBuilder, private router: Router) {
+
+
+ 
+  private userName = '';
+  private password = '';
+  private firstName = '';
+  private lastName = '';
+
+
+  private registerForm: FormGroup;
+
+
+  constructor(private formBuilder: FormBuilder) {
+    this.createForm();
   }
 
-  registerForm: FormGroup;
 
   ngOnInit() {
+ 
+  }
+
+
+  createForm() {
     this.registerForm = this.formBuilder.group({
-      username: [''],
-      password: ['']
+      userName: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(12), Validators.pattern('[a-zA-Z0-9]+([._]?[a-zA-Z0-9]+)')]],
+      password: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(12), Validators.pattern('[a-zA-Z0-9]+([._]?[a-zA-Z0-9]+)')]],
+      firstName: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(12), Validators.pattern('[a-zA-Z0-9]+([._]?[a-zA-Z0-9]+)')]],
+      lastName: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(12), Validators.pattern('[a-zA-Z0-9]+([._]?[a-zA-Z0-9]+)')]],
     });
   }
+
+
 
   get f() {
     return this.registerForm.controls;
