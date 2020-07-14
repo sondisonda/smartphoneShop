@@ -13,9 +13,8 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
 
 
-    //     powtarzasz to w kontruktorze, privat final. Poczytaj o wstrzykiwaniu zależności
-    @Autowired
-    private UsersRepository usersRepository;
+
+    private final UsersRepository usersRepository;
 
     public UserServiceImpl(UsersRepository usersRepository) {
         this.usersRepository = usersRepository;

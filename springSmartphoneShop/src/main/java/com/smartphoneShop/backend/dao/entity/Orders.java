@@ -6,7 +6,7 @@ import lombok.Data;
 import javax.persistence.*;
 import java.util.Date;
 
-@Entity(name = "Order")
+@Entity(name = "Basket")
 @Data
 public class Orders {
 

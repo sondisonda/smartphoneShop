@@ -24,9 +24,9 @@ public class UsersController {
     }
 
     //    Id w path
-    @GetMapping("/byId")
-    public Users getById(@RequestParam Integer index) throws Exception{
-        return userService.findById(index);
+    @GetMapping("/{id}")
+    public Users getById(@PathVariable Integer id) throws Exception{
+        return userService.findById(id);
     }
 
     @PostMapping
@@ -47,3 +47,4 @@ public class UsersController {
     }
 
 }
+
