@@ -23,7 +23,7 @@ public class Smartphones {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private int id;
+    private long id;
 
     @NotNull
     private String brand;

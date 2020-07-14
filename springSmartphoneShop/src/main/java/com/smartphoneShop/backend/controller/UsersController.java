@@ -25,7 +25,7 @@ public class UsersController {
 
     //    Id w path
     @GetMapping("/get/{id}")
-    public Users getById(@PathVariable Integer id) throws Exception{
+    public Users getById(@PathVariable long id) throws Exception{
         return userService.findById(id);
     }
 
@@ -42,7 +42,7 @@ public class UsersController {
 
 //    Id w path
     @DeleteMapping("/delete/{id}")
-    public void deleteUser(@PathVariable Integer id){
+    public void deleteUser(@PathVariable long id){
         userService.deleteById(id);
     }
 

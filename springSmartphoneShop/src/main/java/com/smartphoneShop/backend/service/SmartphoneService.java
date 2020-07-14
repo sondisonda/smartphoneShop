@@ -13,6 +13,6 @@ public interface SmartphoneService {
 
     Smartphones editSmartphone(Smartphones smartphone);
 
-    void deleteSmartphone(int id);
+    void deleteSmartphone(long id);
 
 }

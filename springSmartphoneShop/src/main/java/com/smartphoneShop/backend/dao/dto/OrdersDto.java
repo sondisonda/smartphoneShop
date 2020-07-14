@@ -6,7 +6,7 @@ import java.security.Timestamp;
 @Data
 public class OrdersDto {
 
-    private int id;
+    private long id;
     private int userId;
     private Timestamp date;
     private int value;

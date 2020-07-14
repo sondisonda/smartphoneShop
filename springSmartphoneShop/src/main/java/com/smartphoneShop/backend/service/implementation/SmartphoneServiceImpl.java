@@ -35,8 +35,8 @@ public class SmartphoneServiceImpl implements SmartphoneService {
     }
 
     @Override
-    public void deleteSmartphone(int id) {
-        this.smartphonesRepository.deleteById(id);
+    public void deleteSmartphone(long id) {
+        this.smartphonesRepository.deleteById((int) id);
     }
 
 }
