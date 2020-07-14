@@ -30,8 +30,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatDialogModule} from '@angular/material/dialog';
 import {A11yModule} from '@angular/cdk/a11y';
 import {MatSelectModule} from '@angular/material/select';
-
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { StoreComponent } from './components/store/store.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
     return new TranslateHttpLoader(httpClient);
@@ -49,7 +49,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       ProfileComponent,
       OrderComponent,
       routingComponents,
-      StartPageComponent
+      StartPageComponent,
+      StoreComponent
    ],
    imports: [
       BrowserModule,
