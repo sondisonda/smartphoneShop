@@ -18,13 +18,13 @@ public class UsersController {
         this.userService = usersService;
     }
 
-    @GetMapping()
+    @GetMapping("/getall")
     public List<Users> getAll(){
         return userService.getAllUsers();
     }
 
     //    Id w path
-    @GetMapping("/{id}")
+    @GetMapping("/get/{id}")
     public Users getById(@PathVariable Integer id) throws Exception{
         return userService.findById(id);
     }
@@ -41,9 +41,9 @@ public class UsersController {
     }
 
 //    Id w path
-    @DeleteMapping
-    public void deleteUsers(@RequestParam int index){
-        userService.deleteById(index);
+    @DeleteMapping("/delete/{id}")
+    public void deleteUser(@PathVariable Integer id){
+        userService.deleteById(id);
     }
 
 }

@@ -8,7 +8,7 @@ import com.sun.istack.NotNull;
 import lombok.Data;
 
 // Formatowanie
-@Entity(name = "Customer")
+@Entity(name = "Person")
 @Data
 
 public class Users implements Serializable {
