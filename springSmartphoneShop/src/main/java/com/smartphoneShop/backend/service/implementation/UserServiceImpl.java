@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-// Formatowanie
+// Formatowanie!
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -25,6 +25,7 @@ public class UserServiceImpl implements UserService {
         return this.usersRepository.findAll();
     }
 
+//     może coś bardziej precyzyjnego niz exception
     @Override
     public Users findById(long id) throws Exception {
         return usersRepository.findById((int) id).orElseThrow(Exception::new);
@@ -32,6 +33,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Users updateUser(Users user) {
+//        In line!!
+//
         usersRepository.save(user);
         return user;
     }
@@ -44,6 +47,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Users addUser(Users user) {
+
+        //        In line!!
         usersRepository.save(user);
         return user;
     }

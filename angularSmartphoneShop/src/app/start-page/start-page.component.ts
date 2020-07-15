@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./start-page.component.css']
 })
 export class StartPageComponent implements OnInit {
-// private
+  // private!!
   registerMode = false;
   loginMode = false;
 

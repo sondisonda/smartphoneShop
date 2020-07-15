@@ -11,6 +11,7 @@ import java.util.List;
 @Service
 public class OrderServiceImpl implements OrderService {
 
+//    Analogicznie co było kiedyś, nie musisz :) zmienna na final ;)
     @Autowired
     private  OrdersRepository ordersRepository;
 

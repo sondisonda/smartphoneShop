@@ -9,36 +9,37 @@ import { RegisterComponent } from './components/register/register.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { routingComponents} from './app-routing.module';
+import { routingComponents } from './app-routing.module';
 import { OrderComponent } from './components/order/order.component';
 import { StartPageComponent } from './start-page/start-page.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import {MatListModule} from '@angular/material/list';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatTableModule} from '@angular/material/table';
-import {MatPaginatorModule} from '@angular/material/paginator';
-import {MatSortModule} from '@angular/material/sort';
-import {MatIconModule, MatInputModule} from '@angular/material';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import {MatDialogModule} from '@angular/material/dialog';
-import {A11yModule} from '@angular/cdk/a11y';
-import {MatSelectModule} from '@angular/material/select';
+import { MatListModule } from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatIconModule, MatInputModule } from '@angular/material';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatDialogModule } from '@angular/material/dialog';
+import { A11yModule } from '@angular/cdk/a11y';
+import { MatSelectModule } from '@angular/material/select';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { StoreComponent } from './components/store/store.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
-    return new TranslateHttpLoader(httpClient);
+   return new TranslateHttpLoader(httpClient);
 }
 
-//  Uporządkuj sobie foldery, komponenty które będziesz używał w większej ilości miejsc możesz wrzucić do katalogu
-// commons 
+//  Dzielisz na podstawie parent-child, czyli masz np. okno dialogowe i strone na której jest wyświetlane -> układ katalogów stona:
+//    okno
+
 @NgModule({
    declarations: [
       AppComponent,
@@ -62,7 +63,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       MatListModule,
       MatToolbarModule,
       MatSidenavModule,
-
+      //  Materiale do innego modułu
       MatFormFieldModule,
       MatCheckboxModule,
       MatTableModule,
@@ -81,11 +82,11 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       MatSelectModule,
       TranslateModule.forRoot({
          loader: {
-             provide: TranslateLoader,
-             useFactory: HttpLoaderFactory,
-             deps: [HttpClient]
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient]
          }
-     }),
+      }),
 
    ],
    providers: [],

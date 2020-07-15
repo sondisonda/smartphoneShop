@@ -28,7 +28,7 @@ public class SmartphonesController {
     public Smartphones addSmartphone(@RequestBody Smartphones smartphone){
         return smartphoneService.addSmartphone(smartphone);
     }
-
+// id w path
     @PutMapping
     public Smartphones editSmartphone(@RequestBody Smartphones smartphone){
         return smartphoneService.editSmartphone(smartphone);

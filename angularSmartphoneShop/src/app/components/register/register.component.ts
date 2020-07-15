@@ -7,10 +7,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
+//  Formatowanie na 4 taby ;)
 export class RegisterComponent implements OnInit {
 
 
- 
+  //   zmienne prywatne zaczynamy od _
   private userName = '';
   private password = '';
   private firstName = '';
@@ -26,7 +27,7 @@ export class RegisterComponent implements OnInit {
 
 
   ngOnInit() {
- 
+
   }
 
 
@@ -46,6 +47,7 @@ export class RegisterComponent implements OnInit {
   }
 
   login() {
+    //  do wywalenia
     console.log('Logowanie');
 
   }
