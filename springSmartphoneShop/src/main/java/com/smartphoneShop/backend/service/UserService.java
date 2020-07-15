@@ -10,8 +10,7 @@ public interface UserService {
 
     void deleteById(long id);
 
-//    Nic nie zwraca ;)
-    Users updateUser(Users user);
+    void updateUser(Users user);
 
     Users findById(long id) throws Exception;
 

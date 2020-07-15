@@ -12,4 +12,5 @@ public class UsersDto {
     private String password;
     private String firstName;
     private String lastName;
+    private int role;
 }

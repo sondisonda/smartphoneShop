@@ -5,10 +5,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './start-page.component.html',
   styleUrls: ['./start-page.component.css']
 })
-export class StartPageComponent implements OnInit {
-  // private!!
-  registerMode = false;
-  loginMode = false;
+        export class StartPageComponent implements OnInit {
+
+  private _registerMode = false;
+  private _loginMode = false;
 
   constructor() { }
 
@@ -18,14 +18,14 @@ export class StartPageComponent implements OnInit {
 
 
   registerToggle() {
-    this.registerMode = true;
-    this.loginMode = false;
+    this._registerMode = true;
+    this._loginMode = false;
 
   }
 
   loginToggle() {
-    this.loginMode = true;
-    this.registerMode = false;
+    this._loginMode = true;
+    this._registerMode = false;
 
   }
 

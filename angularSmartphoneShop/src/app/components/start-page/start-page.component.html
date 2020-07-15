@@ -12,14 +12,14 @@
   </div>
 
 
-  <div *ngIf="registerMode" class="container">
+  <div *ngIf="_registerMode" class="container">
     <div class="row justify-content-center">
       <div class="col-4">
     <app-register></app-register>
     </div>
   </div>
 </div>
-<div *ngIf="loginMode" class="container">
+<div *ngIf="_loginMode" class="container">
   <div class="row justify-content-center">
     <div class="col-4">
   <app-login></app-login>

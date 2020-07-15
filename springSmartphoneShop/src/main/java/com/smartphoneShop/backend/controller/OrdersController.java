@@ -12,8 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("api/orders")
 public class OrdersController {
-// Pola prywane!!
-    OrderService orderService;
+    private final OrderService orderService;
 
 
     public OrdersController(OrderService ordersService){

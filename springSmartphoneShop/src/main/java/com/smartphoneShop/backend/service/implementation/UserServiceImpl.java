@@ -4,7 +4,6 @@ import com.smartphoneShop.backend.dao.entity.Users;
 import com.smartphoneShop.backend.repository.UsersRepository;
 import com.smartphoneShop.backend.service.UserService;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 // Formatowanie!
@@ -32,12 +31,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Users updateUser(Users user) {
-//        In line!!
-//
-        usersRepository.save(user);
-        return user;
-    }
+    public void updateUser(Users user) {usersRepository.save(user); }
 
 
     @Override
@@ -46,12 +40,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Users addUser(Users user) {
-
-        //        In line!!
-        usersRepository.save(user);
-        return user;
-    }
+    public Users addUser(Users user) { usersRepository.save(user);return user;  }
 
 
 

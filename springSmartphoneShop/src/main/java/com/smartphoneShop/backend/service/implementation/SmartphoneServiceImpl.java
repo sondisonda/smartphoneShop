@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-//Formatowanie!
 @Service
 public class SmartphoneServiceImpl implements SmartphoneService {
 

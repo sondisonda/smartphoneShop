@@ -37,8 +37,7 @@ public class UsersController {
         return userService.findById(id);
     }
 
-//    Co to ma robić? wyszukujesz i nic z tym nie robisz
-//    Bardziej precyzyjny błąd niż exception
+//   Do poprawy
     @PutMapping("/update/{id}")
     public void updateUser(@PathVariable long id, @RequestBody Users user) throws Exception {
         Users userData =userService.findById(id);
