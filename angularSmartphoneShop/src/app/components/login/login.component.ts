@@ -7,10 +7,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+//  Formatowanie na 4 taby ;)
 export class LoginComponent implements OnInit {
 
 
- 
+
   private userName = '';
   private password = '';
 
@@ -24,7 +25,7 @@ export class LoginComponent implements OnInit {
 
 
   ngOnInit() {
- 
+
   }
 
 

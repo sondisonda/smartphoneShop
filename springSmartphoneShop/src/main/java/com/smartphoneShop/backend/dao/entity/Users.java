@@ -7,7 +7,6 @@ import com.smartphoneShop.backend.dao.enums.RoleType;
 import com.sun.istack.NotNull;
 import lombok.Data;
 
-// Formatowanie
 @Entity(name = "Person")
 @Data
 

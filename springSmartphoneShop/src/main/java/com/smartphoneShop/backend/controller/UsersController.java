@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-//Formatowanie
+//Formatowanie!
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("api/users")
@@ -32,13 +32,13 @@ public class UsersController {
     }
 
 
-    //    Id w path
     @GetMapping("/get/{id}")
     public Users getById(@PathVariable long id) throws Exception{
         return userService.findById(id);
     }
 
-    //    Id w path
+//    Co to ma robić? wyszukujesz i nic z tym nie robisz
+//    Bardziej precyzyjny błąd niż exception
     @PutMapping("/update/{id}")
     public void updateUser(@PathVariable long id, @RequestBody Users user) throws Exception {
         Users userData =userService.findById(id);
@@ -48,7 +48,6 @@ public class UsersController {
 
 
 
-//    Id w path
     @DeleteMapping("/delete/{id}")
     public void deleteUser(@PathVariable long id){
         userService.deleteById(id);
