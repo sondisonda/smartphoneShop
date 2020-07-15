@@ -3,7 +3,6 @@ package com.smartphoneShop.backend.service.implementation;
 import com.smartphoneShop.backend.dao.entity.Users;
 import com.smartphoneShop.backend.repository.UsersRepository;
 import com.smartphoneShop.backend.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -33,7 +32,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Users updateUser(Users user) {
-        return usersRepository.save(user);
+        usersRepository.save(user);
+        return user;
     }
 
 
@@ -47,4 +47,7 @@ public class UserServiceImpl implements UserService {
         usersRepository.save(user);
         return user;
     }
+
+
+
 }

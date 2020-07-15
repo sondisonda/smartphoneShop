@@ -2,8 +2,10 @@ package com.smartphoneShop.backend.controller;
 
 import com.smartphoneShop.backend.dao.entity.Users;
 import com.smartphoneShop.backend.service.UserService;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
+import java.util.Optional;
 
 //Formatowanie
 @CrossOrigin(origins = "http://localhost:4200")
@@ -23,22 +25,28 @@ public class UsersController {
         return userService.getAllUsers();
     }
 
-    //    Id w path
-    @GetMapping("/get/{id}")
-    public Users getById(@PathVariable long id) throws Exception{
-        return userService.findById(id);
-    }
 
     @PostMapping
     public Users addUser(@RequestBody Users user){
         return userService.addUser(user);
     }
 
+
     //    Id w path
-    @PutMapping
-    public Users updateUser(@RequestBody Users user){
-        return userService.updateUser(user);
+    @GetMapping("/get/{id}")
+    public Users getById(@PathVariable long id) throws Exception{
+        return userService.findById(id);
     }
+
+    //    Id w path
+    @PutMapping("/update/{id}")
+    public void updateUser(@PathVariable long id, @RequestBody Users user) throws Exception {
+        Users userData =userService.findById(id);
+
+        userService.updateUser(user);
+    }
+
+
 
 //    Id w path
     @DeleteMapping("/delete/{id}")

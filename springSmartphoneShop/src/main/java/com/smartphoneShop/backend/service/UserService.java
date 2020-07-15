@@ -14,7 +14,7 @@ public interface UserService {
 
     Users findById(long id) throws Exception;
 
-    public Users addUser(Users user);
+    Users addUser(Users user);
 }
 
 
