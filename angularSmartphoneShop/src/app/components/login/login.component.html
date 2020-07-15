@@ -9,7 +9,7 @@
         <tr>
           <td>
             <mat-form-field appearance="outline">
-              <input matInput type="text" id="userName" placeholder="Username" autocomplete="off" formControlName="userName" required >
+              <input matInput type="text" id="userName" placeholder="Username" formControlName="userName" required >
               <mat-error *ngIf="!userName.valid"> Username is required between 4 and 12 characters </mat-error>
             </mat-form-field>
           </td>
@@ -18,7 +18,7 @@
           <td>
               <mat-form-field appearance="outline">
               <input matInput type="password" id="password" placeholder="Password" formControlName="password" required>
-              <mat-error *ngIf="!password.valid"> Username is required between 4 and 12 characters </mat-error>
+              <mat-error *ngIf="!password.valid"> Password is required between 4 and 12 characters </mat-error>
             </mat-form-field>
           </td>
         </tr>
