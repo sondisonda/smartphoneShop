@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  private registerMode = false;
+  private _registerMode = false;
 
 
   constructor() { }
@@ -16,11 +16,11 @@ export class HomeComponent implements OnInit {
   }
 
   registerToggle() {
-    this.registerMode = true;
+    this._registerMode = true;
   }
 
   cancelRegisterMode(registerMode: boolean) {
-    this.registerMode = registerMode;
+    this._registerMode = false;
   }
 
 
