@@ -4,10 +4,10 @@
 
 export const environment = {
   production: false,
-  url: 'http://localhost:8088',
-  urlOrders: 'http://localhost:8088/api/orders',
-  urlUsers: 'http://localhost:8088/api/users',
-  urlSmartphones: 'http://localhost:8088/api/smartphones',
+  url: 'http://localhost:8080',
+  urlOrders: 'http://localhost:8080/api/orders',
+  urlUsers: 'http://localhost:8080/api/users',
+  urlSmartphones: 'http://localhost:8080/api/smartphones',
 
 };
 

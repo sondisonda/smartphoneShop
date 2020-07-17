@@ -18,7 +18,7 @@ create(smartphone: Smartphones): Observable<Object> {
 }
 
  getAllSmartphones(): Observable<Smartphones[]> {
-  return this.http.get<Smartphones[]>(`${this.URL}/getall`);
+  return this.http.get<Smartphones[]>(this.URL);
 }
 
 

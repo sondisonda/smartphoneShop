@@ -24,7 +24,7 @@ public class SmartphonesController {
         this.smartphoneService = smartphonesService;
     }
 
-    @GetMapping("/getall")
+    @GetMapping
     public List<Smartphones> getAllSmartphones(){
         return smartphoneService.getAllSmartphones();
     }
@@ -48,5 +48,5 @@ public class SmartphonesController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
-
+      
 }

@@ -1,0 +1,30 @@
+table{
+    width: 100%;
+  }
+  
+  
+  .Component{
+    width: 33%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+  .mat-table {
+    border: 1px solid #cfcfcf;
+    font-weight: bold;
+    height: 30vh !important;
+  }
+  
+  th {
+    background-color: rgb(228, 228, 228);
+    font-weight: bold;
+    color: black;
+    font-size: 17px;
+  }
+  
+
+  
+
+
+  
