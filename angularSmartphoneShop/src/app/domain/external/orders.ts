@@ -1,4 +1,3 @@
-import { Role } from 'src/app/domain/enum/Role'
 import { Status } from '../enum/status.enum';
 
 export interface Orders {

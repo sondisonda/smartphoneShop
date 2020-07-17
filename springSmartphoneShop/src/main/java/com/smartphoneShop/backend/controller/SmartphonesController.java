@@ -19,12 +19,12 @@ public class SmartphonesController {
         this.smartphoneService = smartphonesService;
     }
 
-    @GetMapping()
+    @GetMapping("/getall")
     public List<Smartphones> getAllSmartphones(){
         return smartphoneService.getAllSmartphones();
     }
 
-    @PostMapping
+    @PostMapping("/add")
     public Smartphones addSmartphone(@RequestBody Smartphones smartphone){
         return smartphoneService.addSmartphone(smartphone);
     }

@@ -1,4 +1,3 @@
-import { Role } from 'src/app/domain/enum/Role'
 import { Roletype } from '../enum/roletype.enum';
 
 export interface Users {
