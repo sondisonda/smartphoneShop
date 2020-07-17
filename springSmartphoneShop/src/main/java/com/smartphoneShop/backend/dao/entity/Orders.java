@@ -21,7 +21,7 @@ public class Orders {
 
     //    tu chyba miała być relacja ??
     @NotNull
-    private int user_id;
+    private long user_id;
 
 
     @NotNull

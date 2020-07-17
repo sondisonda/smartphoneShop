@@ -7,7 +7,7 @@ import java.security.Timestamp;
 public class OrdersDto {
 
     private long id;
-    private int userId;
+    private long userId;
     private Timestamp date;
     private int value;
     private int status; //tmp enum

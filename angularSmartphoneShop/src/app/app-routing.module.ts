@@ -5,7 +5,7 @@ import { LoginComponent } from './components/start-page/login/login.component';
 import { OrderComponent } from './components/order/order.component';
 import { RegisterComponent} from './components/start-page/register/register.component';
 import { StartPageComponent } from './components/start-page/start-page.component';
-import {SmartphoneTableComponent} from 'src/app/components/smartphone-table/smartphone-table.component';
+import { StoreComponent } from './components/store/store.component';
 
 const routes: Routes = [
 
@@ -14,7 +14,7 @@ const routes: Routes = [
   {path: 'order', component: OrderComponent},
   {path: 'start-page', component: StartPageComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'store', component: SmartphoneTableComponent}
+  {path: 'store', component: StoreComponent},
 
 ];
 
@@ -23,4 +23,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents =[ProfileComponent, LoginComponent, OrderComponent, StartPageComponent, RegisterComponent]
+export const routingComponents =[ProfileComponent, LoginComponent, StoreComponent, OrderComponent, StartPageComponent, RegisterComponent]

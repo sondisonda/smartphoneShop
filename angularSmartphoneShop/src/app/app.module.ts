@@ -4,7 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LoginComponent } from './components/start-page/login/login.component'
+import { LoginComponent } from './components/start-page/login/login.component';
 import { RegisterComponent } from './components/start-page/register/register.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { StartPageComponent } from './components/start-page/start-page.component';
@@ -16,7 +16,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { A11yModule } from '@angular/cdk/a11y';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AngularMaterialModule } from './modules/angular-material/angular-material.module';
-import {SmartphoneTableComponent} from 'src/app/components/smartphone-table/smartphone-table.component';
+import {StoreComponent} from './components/store/store.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
    return new TranslateHttpLoader(httpClient);
@@ -32,10 +32,10 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       RegisterComponent,
       NavigationComponent,
       ProfileComponent,
+      StoreComponent,
       OrderComponent,
       routingComponents,
       StartPageComponent,
-      SmartphoneTableComponent,
    ],
    imports: [
       BrowserModule,
