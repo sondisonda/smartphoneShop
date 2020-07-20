@@ -12,10 +12,9 @@ import { Roletype } from 'src/app/domain/enum/roletype.enum';
 })
 export class UserListComponent implements OnInit {
 
-  private columnsToDisplay: string[] = ['id', 'username', 'givenRole'];
+  private columnsToDisplay: string[] = ['id', 'username', 'roleType'];
   dataSource: MatTableDataSource<Users>;
 
-  // Lista Userów
   users: Users[];
 
 
