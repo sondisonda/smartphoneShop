@@ -6,6 +6,7 @@ import { OrderComponent } from './components/order/order.component';
 import { RegisterComponent} from './components/start-page/register/register.component';
 import { StartPageComponent } from './components/start-page/start-page.component';
 import { StoreComponent } from './components/store/store.component';
+import {UserListComponent} from 'src/app/components/user-list/user-list.component';
 
 const routes: Routes = [
 
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'order', component: OrderComponent},
   {path: 'start-page', component: StartPageComponent},
+  {path: 'user-list', component: UserListComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'store', component: StoreComponent},
 
@@ -23,4 +25,10 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents =[ProfileComponent, LoginComponent, StoreComponent, OrderComponent, StartPageComponent, RegisterComponent]
+export const routingComponents =[ ProfileComponent,
+                                  LoginComponent, 
+                                  UserListComponent, 
+                                  StoreComponent,
+                                  OrderComponent, 
+                                  StartPageComponent,
+                                  RegisterComponent ] 

@@ -1,0 +1,31 @@
+<div  style="text-align: center">
+  <h1>User List</h1>
+</div>
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort>
+
+
+
+      <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
+          <td mat-cell *matCellDef="let User">{{User.id}}</td>
+        </ng-container>
+
+      
+        <ng-container matColumnDef="username">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Username</th>
+          <td mat-cell *matCellDef="let User">{{User.userName}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="givenRole">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Role</th>
+          <td mat-cell *matCellDef="let User">{{User.givenRole}}</td>
+        </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+      <tr mat-row *matRowDef="let row; columns: columnsToDisplay;">
+      </tr>
+  </table>
+
+</div>

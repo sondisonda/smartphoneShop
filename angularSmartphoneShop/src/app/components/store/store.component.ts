@@ -12,7 +12,6 @@ export class StoreComponent implements OnInit {
 
 
   private columnsToDisplay: string[] = ['id', 'brand', 'model', 'stock', 'prize'];
-  private _dataSource: MatTableDataSource<any>;
 
   // Lista produktów
   smartphones: Smartphones[];
@@ -22,9 +21,7 @@ export class StoreComponent implements OnInit {
 
 
   emptyString = '';
-  countries: string[];
-  types: string[];
-  categories: string[];
+ 
 
   // Wstrzyknięcie serwisu produktów do pobrania ich z bazy oraz dialogu aby edytować rekordy (jeszcze nie działa)
   constructor(public productService: SmartphoneService ) {  }
