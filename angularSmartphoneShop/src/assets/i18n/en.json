@@ -6,6 +6,7 @@
         "DELETE": "Delete",
         "ADD": "Add",
         "LOGOUT": "Logout",
+        "LOGIN": "Log in",
         "EDIT": "Edit",
         "CLOSE": "Close",
         "SAVE": "Save",

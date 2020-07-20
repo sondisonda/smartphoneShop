@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
+
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
@@ -10,7 +12,9 @@ export class NavigationComponent implements OnInit {
 private loginMode = true;
 
 
-  constructor() { }
+
+  constructor( private _translate: TranslateService
+    ) {  }
 
   ngOnInit() {
   }
