@@ -1,0 +1,36 @@
+<h1 mat-dialog-title>Product</h1>
+<div mat-dialog-content>
+  <div class="row">
+    <div class="column">
+
+      <p>Brand</p>
+      <mat-form-field>
+        <input matInput [(ngModel)]="this.smartphone.brand">
+      </mat-form-field>
+
+      <p>Name</p>
+      <mat-form-field>
+        <input matInput [(ngModel)]="this.smartphone.model">
+      </mat-form-field>
+
+
+    </div>
+    <div class="column">
+
+      <p>Prize</p>
+      <mat-form-field>
+        <input matInput type="number" min="0" [(ngModel)]="this.smartphone.prize">
+      </mat-form-field>
+      
+      <p>Stock</p>
+      <mat-form-field>
+        <input matInput type="number" min="0" [(ngModel)]="this.smartphone.stock">
+      </mat-form-field>
+
+    </div>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button (click)="cancelClick()" color="warn">Cancel</button>
+  <button mat-raised-button [mat-dialog-close]="this.smartphone" color="primary">OK</button>
+</div>

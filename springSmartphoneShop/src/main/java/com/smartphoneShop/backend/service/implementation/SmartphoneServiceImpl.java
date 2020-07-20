@@ -30,11 +30,6 @@ public class SmartphoneServiceImpl implements SmartphoneService {
     }
 
     @Override
-    public void deleteSmartphone(long id) {
-        this.smartphonesRepository.deleteById((int) id);
-    }
-
-    @Override
     public Optional<Smartphones> findById(long id) {
         return Optional.empty();
     }
@@ -51,6 +46,9 @@ public class SmartphoneServiceImpl implements SmartphoneService {
         this.smartphonesRepository.save(smartphoneFromData);
     }
 
-
+    @Override
+    public void deleteById(long id) {
+        this.smartphonesRepository.deleteById((int) id);
+    }
 
 }

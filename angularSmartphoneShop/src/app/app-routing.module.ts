@@ -10,6 +10,7 @@ import {UserListComponent} from 'src/app/components/user-list/user-list.componen
 
 const routes: Routes = [
 
+
   {path: 'profile', component: ProfileComponent},
   {path: 'login', component: LoginComponent},
   {path: 'order', component: OrderComponent},
@@ -17,7 +18,6 @@ const routes: Routes = [
   {path: 'user-list', component: UserListComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'store', component: StoreComponent},
-
 ];
 
 @NgModule({

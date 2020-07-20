@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import {FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,13 +18,12 @@ import { A11yModule } from '@angular/cdk/a11y';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AngularMaterialModule } from './modules/angular-material/angular-material.module';
 import {StoreComponent} from './components/store/store.component';
+import { SmartphoneWindowComponent } from './components/store/smartphone-window/smartphone-window.component';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
    return new TranslateHttpLoader(httpClient);
 }
-
-//  Dzielisz na podstawie parent-child, czyli masz np. okno dialogowe i strone na której jest wyświetlane -> układ katalogów stona:
-//    okno
 
 @NgModule({
    declarations: [
@@ -36,7 +36,14 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       OrderComponent,
       routingComponents,
       StartPageComponent,
+      SmartphoneWindowComponent,
+      ConfirmDialogComponent
    ],
+   entryComponents: [
+
+      SmartphoneWindowComponent,
+      ConfirmDialogComponent,
+    ],
    imports: [
       BrowserModule,
       AppRoutingModule,
@@ -46,6 +53,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       BrowserModule,
       HttpClientModule,
       BrowserAnimationsModule,
+      FormsModule ,
       ReactiveFormsModule,
       A11yModule,
       TranslateModule.forRoot({

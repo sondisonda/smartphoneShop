@@ -14,7 +14,7 @@ public interface SmartphoneService {
 
     void updateSmartphone(Smartphones smartphone, long id) throws Exception;
 
-    void deleteSmartphone(long id);
+    void deleteById(long id);
 
     Optional<Smartphones> findById(long id);
 }

@@ -38,6 +38,13 @@ public class SmartphonesController {
         this.smartphoneService.updateSmartphone(smartphone, id);
     }
 
+
+    @DeleteMapping("/delete/{id}")
+    public void deleteSmartphone(@PathVariable long id){
+        smartphoneService.deleteById(id);
+    }
+
+
     @GetMapping("/get/{id}")
     public ResponseEntity<Smartphones> getSmartphoneById(@PathVariable("id") long id) {
         Optional<Smartphones> smartphoneData = smartphoneService.findById((int) id);

@@ -2,6 +2,13 @@
     <h1>Smartphone Shop</h1>
 </div>
 
+<div class="Component Component_Button">
+  <button mat-flat-button (click)="addButtonClick()" color="primary">ADD</button>
+
+</div>
+
+<br>
+
 <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource" matSort>
 
@@ -32,8 +39,24 @@
             <td mat-cell *matCellDef="let Smartphone">{{Smartphone.prize}}</td>
           </ng-container>
 
-  
-
+          <ng-container matColumnDef="edit">
+            <th mat-header-cell *matHeaderCellDef>Edit</th>
+            <td mat-cell *matCellDef="let Smartphone">
+              <button mat-icon-button (click)="editButtonClick(dataSource.data.indexOf(Smartphone))">
+                <mat-icon color="primary">edit</mat-icon>
+              </button>
+            </td>
+          </ng-container>
+        
+          <ng-container matColumnDef="delete">
+            <th mat-header-cell *matHeaderCellDef>
+            </th>
+            <td mat-cell *matCellDef="let product">
+              <button mat-icon-button (click)="deleteButtonClick(dataSource.data.indexOf(Smartphone))">
+                <mat-icon color="warn">delete</mat-icon>
+              </button>
+            </td>
+          </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
         <tr mat-row *matRowDef="let row; columns: columnsToDisplay;">
