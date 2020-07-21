@@ -6,11 +6,11 @@ import { SmartphoneWindowComponent } from './smartphone-window/smartphone-window
 import {ConfirmDialogComponent} from 'src/app/components/confirm-dialog/confirm-dialog.component';
 
 @Component({
-  selector: 'app-store',
-  templateUrl: './store.component.html',
-  styleUrls: ['./store.component.css']
+  selector: 'app-smartphone-list',
+  templateUrl: './smartphone-list.component.html',
+  styleUrls: ['./smartphone-list.component.css']
 })
-export class StoreComponent implements OnInit {
+export class SmartphoneListComponent implements OnInit {
 
 
   private columnsToDisplay: string[] = ['id', 'brand', 'model', 'stock', 'prize', 'edit', 'delete'];

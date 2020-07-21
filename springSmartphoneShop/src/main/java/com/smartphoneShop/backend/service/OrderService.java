@@ -9,5 +9,7 @@ public interface OrderService {
     List<Orders> getAllOrders();
 
     Orders addOrder(Orders order);
-    
+
+    Orders updateOrder(Orders order) throws Exception;
+
 }

@@ -1,0 +1,47 @@
+<div  style="text-align: center">
+  <h1>Order List</h1>
+</div>
+
+
+
+<div class="Component Component_Button">
+  <button mat-flat-button (click)="addButtonClick()" color="primary">ADD</button>
+
+</div>
+
+
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort>
+
+
+
+      <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
+          <td mat-cell *matCellDef="let Order">{{Order.id}}</td>
+        </ng-container>
+
+      
+        <ng-container matColumnDef="value">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Value</th>
+          <td mat-cell *matCellDef="let Order">{{Order.value}}</td>
+        </ng-container>
+
+
+
+        <ng-container matColumnDef="edit">
+          <th mat-header-cell *matHeaderCellDef>Edit</th>
+          <td mat-cell *matCellDef="let Order">
+            <button mat-icon-button (click)="editButtonClick(dataSource.data.indexOf(Order))">
+              <mat-icon color="primary">edit</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+ 
+
+      <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+      <tr mat-row *matRowDef="let row; columns: columnsToDisplay;">
+      </tr>
+  </table>
+
+</div>

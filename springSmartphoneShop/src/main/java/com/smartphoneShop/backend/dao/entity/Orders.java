@@ -5,7 +5,8 @@ import com.sun.istack.NotNull;
 import lombok.Data;
 import javax.persistence.*;
 import java.util.Date;
-//Formatowanie!
+
+
 @Entity(name = "Basket")
 @Data
 public class Orders {
@@ -21,7 +22,7 @@ public class Orders {
 
     //    tu chyba miała być relacja ??
     @NotNull
-    private long user_id;
+    private int user_id;
 
 
     @NotNull

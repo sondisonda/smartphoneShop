@@ -29,4 +29,9 @@ public class OrdersController {
         return orderService.addOrder(order);
     }
 
+    @PutMapping
+    public Orders updateOrder(@RequestBody Orders order) throws Exception{
+        return orderService.updateOrder(order);
+    }
+
 }

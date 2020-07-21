@@ -17,9 +17,12 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { A11yModule } from '@angular/cdk/a11y';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AngularMaterialModule } from './modules/angular-material/angular-material.module';
-import {StoreComponent} from './components/store/store.component';
-import { SmartphoneWindowComponent } from './components/store/smartphone-window/smartphone-window.component';
+import {SmartphoneListComponent} from './components/admin-lists/smartphone-list/smartphone-list.component';
+import { SmartphoneWindowComponent } from './components/admin-lists/smartphone-list/smartphone-window/smartphone-window.component';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
+import { UserWindowComponent } from './components/admin-lists/user-list/user-window/user-window.component';
+import { OrderListComponent } from './components/admin-lists/order-list/order-list.component';
+import { OrderWindowComponent } from './components/admin-lists/order-list/order-window/order-window.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
    return new TranslateHttpLoader(httpClient);
@@ -32,17 +35,23 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       RegisterComponent,
       NavigationComponent,
       ProfileComponent,
-      StoreComponent,
+      SmartphoneListComponent,
       OrderComponent,
       routingComponents,
       StartPageComponent,
       SmartphoneWindowComponent,
-      ConfirmDialogComponent
+      ConfirmDialogComponent,
+      UserWindowComponent,
+      OrderListComponent,
+      OrderWindowComponent,
+
    ],
    entryComponents: [
 
       SmartphoneWindowComponent,
       ConfirmDialogComponent,
+      UserWindowComponent,
+      OrderWindowComponent,
     ],
    imports: [
       BrowserModule,
