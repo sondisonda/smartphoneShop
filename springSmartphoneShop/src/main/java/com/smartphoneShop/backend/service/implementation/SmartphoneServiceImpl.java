@@ -1,9 +1,11 @@
 package com.smartphoneShop.backend.service.implementation;
 
 import com.smartphoneShop.backend.dao.entity.Smartphones;
+import com.smartphoneShop.backend.exception.RecordNotFoundException;
 import com.smartphoneShop.backend.repository.SmartphonesRepository;
 import com.smartphoneShop.backend.service.SmartphoneService;
 import org.springframework.stereotype.Service;
+import java.util.List;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,6 +15,7 @@ public class SmartphoneServiceImpl implements SmartphoneService {
 
 
     private final SmartphonesRepository smartphonesRepository;
+    private final String message = "Smartphones";
 
     public SmartphoneServiceImpl(SmartphonesRepository smartphonesRepository) {
         this.smartphonesRepository = smartphonesRepository;
@@ -34,11 +37,16 @@ public class SmartphoneServiceImpl implements SmartphoneService {
         return smartphonesRepository.save(smartphone);
     }
 
-
-
     @Override
-    public void deleteById(long id) {
-        this.smartphonesRepository.deleteById((int) id);
+    public void deleteSmartphone(int id) throws RecordNotFoundException{
+
+        try {
+            smartphonesRepository.deleteById( id);
+        }
+        catch(Exception e){
+            throw new RecordNotFoundException(message);
+        }
     }
+
 
 }

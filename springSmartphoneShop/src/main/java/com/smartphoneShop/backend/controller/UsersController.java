@@ -33,13 +33,12 @@ public class UsersController {
 
 
     @GetMapping("/get/{id}")
-    public Users getById(@PathVariable long id) throws Exception{
+    public Users getById(@PathVariable int id) throws Exception{
         return userService.findById(id);
     }
 
-//   Do poprawy
     @PutMapping("/update/{id}")
-    public void updateUser(@PathVariable long id, @RequestBody Users user) throws Exception {
+    public void updateUser(@PathVariable int id, @RequestBody Users user) throws Exception {
         Users userData =userService.findById(id);
 
         userService.updateUser(user);
@@ -47,7 +46,7 @@ public class UsersController {
 
 
     @DeleteMapping("/delete/{id}")
-    public void deleteUser(@PathVariable long id){
+    public void deleteUser(@PathVariable("id")int id){
         userService.deleteById(id);
     }
 

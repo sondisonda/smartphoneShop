@@ -5,11 +5,7 @@ import { environment } from 'src/environments/environment';
 import { Smartphones } from 'src/app/domain/external/smartphones';
 
 
-const httpOptions = {
-  headers: new HttpHeaders({
-    'Content-Type': 'application/json'
-  })
-};
+
 
 @Injectable({
   providedIn: 'root'
@@ -34,7 +30,7 @@ public addSmartphone(smartphone: Smartphones): Observable<Smartphones> {
 }
 
 public deleteSmartphone(smartphone: Smartphones): Observable<any> {
-  return this.http.delete(`${this.URL}/delete/${smartphone.id}`, {responseType: 'text'});
+  return this.http.delete(this.URL + '/'+ smartphone.id, {responseType: 'text'});
 }
 public updateSmartphone(smartphone: Smartphones): Observable<Smartphones> {
   return this.http.put<Smartphones>(this.URL, smartphone);

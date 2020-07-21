@@ -2,11 +2,9 @@ package com.smartphoneShop.backend.controller;
 
 
 import com.smartphoneShop.backend.dao.entity.Smartphones;
-import com.smartphoneShop.backend.repository.SmartphonesRepository;
 import com.smartphoneShop.backend.service.SmartphoneService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.smartphoneShop.backend.exception.RecordNotFoundException;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -40,11 +38,11 @@ public class SmartphonesController {
         return smartphoneService.updateSmartphone(smartphone);
     }
 
-    @DeleteMapping("/delete/{id}")
-    public void deleteSmartphone(@PathVariable long id){
-        smartphoneService.deleteById(id);
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public void deleteSmartphone(@PathVariable int id) throws RecordNotFoundException {
+        this.smartphoneService.deleteSmartphone(id);
     }
-
 
       
 }

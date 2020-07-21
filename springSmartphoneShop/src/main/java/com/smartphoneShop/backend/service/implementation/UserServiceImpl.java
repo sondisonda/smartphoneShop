@@ -26,7 +26,7 @@ public class UserServiceImpl implements UserService {
 
 //     może coś bardziej precyzyjnego niz exception
     @Override
-    public Users findById(long id) throws Exception {
+    public Users findById(int id) throws Exception {
         return usersRepository.findById((int) id).orElseThrow(Exception::new);
     }
 
@@ -35,8 +35,8 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
-    public void deleteById(long id) {
-        this.usersRepository.deleteById((int) id);
+    public void deleteById(int id) {
+        this.usersRepository.deleteById( id);
     }
 
     @Override

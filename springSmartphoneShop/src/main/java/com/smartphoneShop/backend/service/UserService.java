@@ -8,11 +8,11 @@ public interface UserService {
 
     List<Users> getAllUsers();
 
-    void deleteById(long id);
+    void deleteById(int id);
 
     void updateUser(Users user);
 
-    Users findById(long id) throws Exception;
+    Users findById(int id) throws Exception;
 
     Users addUser(Users user);
 }

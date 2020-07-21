@@ -17,7 +17,7 @@ public class Orders {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private long id;
+    private int id;
 
     //    tu chyba miała być relacja ??
     @NotNull
