@@ -36,12 +36,6 @@ export class StoreComponent implements OnInit {
     });
   }
 
-  editButtonClick(index: number) {
-    const dialogRef = this.dialog.open(SmartphoneWindowComponent, {
-      width: '800px',
-      data: this.smartphones[index]
-    });
-  }
 
   addButtonClick() {
     const dialogRef = this.dialog.open(SmartphoneWindowComponent, {
@@ -60,15 +54,31 @@ export class StoreComponent implements OnInit {
     });
   }
 
-  deleteButtonClick(index: number) {
-    const dialogConfirm = this.dialog.open(ConfirmDialogComponent, {
-      width: '300px',
-      data: this.smartphones[index].model
+  editButtonClick(index: number) {
+    const dialogRef = this.dialog.open(SmartphoneWindowComponent, {
+      width: '800px',
+      data: this.smartphones[index]
+    });
+
+    dialogRef.afterClosed().subscribe(smartphones => {
+      if (smartphones) {
+        this.smartphoneService.updateSmartphone(smartphones).subscribe(data => {
+          this.reloadData();
+        });
+      }
+    });
+  }
+
+
+  eraseButtonClick(id: number) {
+    const dialogConfirm  = this.dialog.open(ConfirmDialogComponent, {
+      width: '3000',
+      data: this.smartphones[id].model
     });
 
     dialogConfirm.afterClosed().subscribe(confirm => {
       if (confirm) {
-        this.smartphoneService.deleteSmartphone(this.smartphones[index]).subscribe(info => {
+        this.smartphoneService.deleteSmartphone(this.smartphones[id]).subscribe(info => {
           console.log(info);
           this.reloadData();
         });

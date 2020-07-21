@@ -33,11 +33,12 @@ public class SmartphonesController {
     public Smartphones addSmartphone(@RequestBody Smartphones smartphone){
         return smartphoneService.saveSmartphone(smartphone);
     }
-    @PutMapping("/update/{id}")
-    public void updateSmartphone(@RequestBody Smartphones smartphone, @PathVariable long id) throws Exception {
-        this.smartphoneService.updateSmartphone(smartphone, id);
-    }
 
+
+    @PutMapping
+    public Smartphones updateSmartphone(@RequestBody Smartphones smartphone) throws Exception{
+        return smartphoneService.updateSmartphone(smartphone);
+    }
 
     @DeleteMapping("/delete/{id}")
     public void deleteSmartphone(@PathVariable long id){
@@ -45,15 +46,5 @@ public class SmartphonesController {
     }
 
 
-    @GetMapping("/get/{id}")
-    public ResponseEntity<Smartphones> getSmartphoneById(@PathVariable("id") long id) {
-        Optional<Smartphones> smartphoneData = smartphoneService.findById((int) id);
-
-        if (smartphoneData.isPresent()) {
-            return new ResponseEntity<>(smartphoneData.get(), HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-    }
       
 }

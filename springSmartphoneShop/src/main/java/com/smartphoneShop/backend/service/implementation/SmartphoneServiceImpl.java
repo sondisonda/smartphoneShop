@@ -30,21 +30,11 @@ public class SmartphoneServiceImpl implements SmartphoneService {
     }
 
     @Override
-    public Optional<Smartphones> findById(long id) {
-        return Optional.empty();
+    public Smartphones updateSmartphone(Smartphones smartphone) throws Exception {
+        return smartphonesRepository.save(smartphone);
     }
 
-    @Override
-    public void updateSmartphone(Smartphones smartphone, long id) throws Exception {
-        Smartphones smartphoneFromData = this.smartphonesRepository.findById(Math.toIntExact(id))
-                .orElseThrow(Exception::new);
-        smartphoneFromData.setId(id);
-        smartphoneFromData.setBrand(smartphone.getBrand());
-        smartphoneFromData.setModel(smartphone.getModel());
-        smartphoneFromData.setPrize(smartphone.getPrize());
-        smartphoneFromData.setStock(smartphone.getStock());
-        this.smartphonesRepository.save(smartphoneFromData);
-    }
+
 
     @Override
     public void deleteById(long id) {
