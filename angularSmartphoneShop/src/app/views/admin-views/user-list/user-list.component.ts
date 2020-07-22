@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatSnackBar, MatSort, MatTableDataSource } from '@angular/material';
 import { UserService } from 'src/app/services/user/user.service';
 import { Users } from 'src/app/domain/external/users';
-import { UserWindowComponent} from 'src/app/components/admin-lists/user-list/user-window/user-window.component';
-import {ConfirmDialogComponent} from 'src/app/components/confirm-dialog/confirm-dialog.component';
+import { UserWindowComponent} from 'src/app/views/admin-views/user-list/user-window/user-window.component';
+import {ConfirmDialogComponent} from 'src/app/views/confirm-dialog/confirm-dialog.component';
 
 @Component({
   selector: 'app-user-list',

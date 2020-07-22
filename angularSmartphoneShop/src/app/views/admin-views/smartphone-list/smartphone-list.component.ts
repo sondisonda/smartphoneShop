@@ -3,7 +3,7 @@ import { MatDialog, MatSnackBar, MatSort, MatTableDataSource } from '@angular/ma
 import { SmartphoneService } from 'src/app/services/smartphone/smartphone.service';
 import { Smartphones } from 'src/app/domain/external/smartphones';
 import { SmartphoneWindowComponent } from './smartphone-window/smartphone-window.component';
-import {ConfirmDialogComponent} from 'src/app/components/confirm-dialog/confirm-dialog.component';
+import {ConfirmDialogComponent} from 'src/app/views/confirm-dialog/confirm-dialog.component';
 
 @Component({
   selector: 'app-smartphone-list',

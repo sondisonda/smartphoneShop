@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatSnackBar, MatSort, MatTableDataSource } from '@angular/material';
-import {ConfirmDialogComponent} from 'src/app/components/confirm-dialog/confirm-dialog.component';
+import {ConfirmDialogComponent} from 'src/app/views/confirm-dialog/confirm-dialog.component';
 import { Orders } from 'src/app/domain/external/orders';
 import { OrderService } from 'src/app/services/order/order.service';
 import { OrderWindowComponent } from './order-window/order-window.component';

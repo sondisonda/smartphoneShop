@@ -31,12 +31,12 @@ private _adminMode = true;
 
   }
 
-  toggleAdminMode(){
+  toggleAdminMode() {
     this._adminMode = true;
 
   }
 
-  toggleUserMode(){
+  toggleUserMode() {
     this._adminMode = false;
 
   }
