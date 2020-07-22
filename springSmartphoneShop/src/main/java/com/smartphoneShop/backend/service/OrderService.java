@@ -1,15 +1,15 @@
 package com.smartphoneShop.backend.service;
 
-import com.smartphoneShop.backend.dao.entity.Orders;
+import com.smartphoneShop.backend.dao.entity.Order;
 
 import java.util.List;
 
 public interface OrderService {
 
-    List<Orders> getAllOrders();
+    List<Order> getAllOrders();
 
-    Orders addOrder(Orders order);
+    Order addOrder(Order order);
 
-    Orders updateOrder(Orders order) throws Exception;
+    Order updateOrder(Order order) throws Exception;
 
 }

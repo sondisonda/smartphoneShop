@@ -1,7 +1,7 @@
 package com.smartphoneShop.backend.service.implementation;
 
-import com.smartphoneShop.backend.dao.entity.Orders;
-import com.smartphoneShop.backend.repository.OrdersRepository;
+import com.smartphoneShop.backend.dao.entity.Order;
+import com.smartphoneShop.backend.repository.OrderRepository;
 import com.smartphoneShop.backend.service.OrderService;
 import org.springframework.stereotype.Service;
 
@@ -11,25 +11,25 @@ import java.util.List;
 public class OrderServiceImpl implements OrderService {
 
 
-    private final OrdersRepository ordersRepository;
+    private final OrderRepository orderRepository;
 
-    public OrderServiceImpl(OrdersRepository ordersRepository) {
-        this.ordersRepository = ordersRepository;
+    public OrderServiceImpl(OrderRepository orderRepository) {
+        this.orderRepository = orderRepository;
     }
 
     @Override
-    public List<Orders> getAllOrders() {
-        return this.ordersRepository.findAll();
+    public List<Order> getAllOrders() {
+        return this.orderRepository.findAll();
     }
 
     @Override
-    public Orders addOrder(Orders order) {
-        return ordersRepository.save(order);
+    public Order addOrder(Order order) {
+        return orderRepository.save(order);
     }
 
     @Override
-    public Orders updateOrder(Orders order) throws Exception {
-        return ordersRepository.save(order);
+    public Order updateOrder(Order order) throws Exception {
+        return orderRepository.save(order);
     }
 
 }

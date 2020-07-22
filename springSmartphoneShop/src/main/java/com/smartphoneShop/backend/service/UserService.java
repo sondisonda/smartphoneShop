@@ -1,20 +1,20 @@
 package com.smartphoneShop.backend.service;
 
-import com.smartphoneShop.backend.dao.entity.Users;
+import com.smartphoneShop.backend.dao.entity.User;
 
 import java.util.List;
 
 public interface UserService {
 
-    List<Users> getAllUsers();
+    List<User> getAllUsers();
 
     void deleteById(int id);
 
-    void updateUser(Users user);
+    void updateUser(User user);
 
-    Users findById(int id) throws Exception;
+    User findById(int id) throws Exception;
 
-    Users addUser(Users user);
+    User addUser(User user);
 }
 
 

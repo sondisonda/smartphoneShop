@@ -2,17 +2,18 @@ package com.smartphoneShop.backend.dao.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 import com.smartphoneShop.backend.dao.enums.RoleType;
 import com.sun.istack.NotNull;
 import lombok.Data;
 
-@Entity(name = "Person")
+@Entity(name = "USER")
 @Data
 
-public class Users implements Serializable {
+public class User implements Serializable {
 
-    Users() {
+    User() {
     }
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,4 +34,9 @@ public class Users implements Serializable {
 
     @Enumerated(value = EnumType.STRING)
     private RoleType roleType;
+
+    @OneToMany
+    private List<Order> order;
+
+
 }

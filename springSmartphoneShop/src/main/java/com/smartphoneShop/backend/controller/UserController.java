@@ -1,45 +1,44 @@
 package com.smartphoneShop.backend.controller;
 
-import com.smartphoneShop.backend.dao.entity.Users;
+import com.smartphoneShop.backend.dao.entity.User;
 import com.smartphoneShop.backend.service.UserService;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
-import java.util.Optional;
 
 //Formatowanie!
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("api/users")
 
-public class UsersController {
+public class UserController {
 
     private final UserService userService;
 
-    public UsersController(UserService usersService){
+    public UserController(UserService usersService){
         this.userService = usersService;
     }
 
     @GetMapping
-    public List<Users> getAll(){
+    public List<User> getAll(){
         return userService.getAllUsers();
     }
 
 
     @PostMapping("/add")
-    public Users addUser(@RequestBody Users user){
+    public User addUser(@RequestBody User user){
         return userService.addUser(user);
     }
 
 
     @GetMapping("/get/{id}")
-    public Users getById(@PathVariable int id) throws Exception{
+    public User getById(@PathVariable int id) throws Exception{
         return userService.findById(id);
     }
 
     @PutMapping("/update/{id}")
-    public void updateUser(@PathVariable int id, @RequestBody Users user) throws Exception {
-        Users userData =userService.findById(id);
+    public void updateUser(@PathVariable int id, @RequestBody User user) throws Exception {
+        User userData =userService.findById(id);
 
         userService.updateUser(user);
     }

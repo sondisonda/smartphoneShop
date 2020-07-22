@@ -5,25 +5,20 @@ import com.sun.istack.NotNull;
 import lombok.Data;
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 
-@Entity(name = "Basket")
+@Entity(name = "ORDER")
 @Data
-public class Orders {
+public class Order {
 
 
-    Orders() {
+    Order() {
     }
-
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private int id;
-
-    //    tu chyba miała być relacja ??
-    @NotNull
-    private int user_id;
-
 
     @NotNull
     private Date date;
@@ -33,5 +28,11 @@ public class Orders {
 
     @Enumerated(value = EnumType.STRING)
     private Status status;// @NotNull
+
+    @ManyToOne
+    private User user;
+
+    @ManyToMany
+    private List<Smartphone> smartphone;
 
 }

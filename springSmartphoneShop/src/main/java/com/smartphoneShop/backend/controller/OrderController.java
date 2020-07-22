@@ -1,7 +1,7 @@
 package com.smartphoneShop.backend.controller;
 
 
-import com.smartphoneShop.backend.dao.entity.Orders;
+import com.smartphoneShop.backend.dao.entity.Order;
 import com.smartphoneShop.backend.service.OrderService;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,26 +11,26 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/orders")
-public class OrdersController {
+public class OrderController {
     private final OrderService orderService;
 
 
-    public OrdersController(OrderService ordersService){
+    public OrderController(OrderService ordersService){
         this.orderService = ordersService;
     }
 
     @GetMapping()
-    public List<Orders> getAllOrders(){
+    public List<Order> getAllOrders(){
         return orderService.getAllOrders();
     }
 
     @PostMapping("/add")
-    public Orders addOrder(@RequestBody Orders order){
+    public Order addOrder(@RequestBody Order order){
         return orderService.addOrder(order);
     }
 
     @PutMapping
-    public Orders updateOrder(@RequestBody Orders order) throws Exception{
+    public Order updateOrder(@RequestBody Order order) throws Exception{
         return orderService.updateOrder(order);
     }
 

@@ -3,21 +3,18 @@ package com.smartphoneShop.backend.dao.entity;
 
 import com.sun.istack.NotNull;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 //Formatowanie!
-@Entity(name = "Smartphone")
+@Entity(name = "SMARTPHONE")
 
 @Data
-public class Smartphones {
+public class Smartphone {
 
 
-    Smartphones() {
+    Smartphone() {
     }
 
 
@@ -36,4 +33,8 @@ public class Smartphones {
 
     @NotNull
     private int stock;
+
+
+    @ManyToMany
+    private List<Order> order;
 }
