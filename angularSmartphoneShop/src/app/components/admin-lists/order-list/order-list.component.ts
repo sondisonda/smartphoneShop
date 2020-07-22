@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatSnackBar, MatSort, MatTableDataSource } from '@angular/material';
-import { OrderService } from 'src/app/services/order/order.service';
+import {ConfirmDialogComponent} from 'src/app/components/confirm-dialog/confirm-dialog.component';
 import { Orders } from 'src/app/domain/external/orders';
-import { OrderWindowComponent} from 'src/app/components/admin-lists/order-list/order-window/order-window.component'
+import { OrderService } from 'src/app/services/order/order.service';
+import { OrderWindowComponent } from './order-window/order-window.component';
 
 @Component({
-  selector: 'app-order-list',
+  selector: 'app-order-list-list',
   templateUrl: './order-list.component.html',
   styleUrls: ['./order-list.component.css']
 })
 export class OrderListComponent implements OnInit {
 
 
-  private columnsToDisplay: string[] = ['id', 'value', 'edit'];
+  private columnsToDisplay: string[] = ['id', 'value' , 'edit'];
 
   orders: Orders[];
 
@@ -53,7 +54,6 @@ export class OrderListComponent implements OnInit {
     });
   }
 
-
   editButtonClick(index: number) {
     const dialogRef = this.dialog.open(OrderWindowComponent, {
       width: '800px',
@@ -68,8 +68,6 @@ export class OrderListComponent implements OnInit {
       }
     });
   }
-
-
 
 
 }
