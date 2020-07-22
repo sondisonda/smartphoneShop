@@ -1,6 +1,6 @@
 package com.smartphoneShop.backend.service;
 
-import com.smartphoneShop.backend.dao.entity.Smartphone;
+import com.smartphoneShop.backend.dao.entity.Smartphones;
 import com.smartphoneShop.backend.exception.RecordNotFoundException;
 
 import java.util.List;
@@ -8,11 +8,11 @@ import java.util.List;
 
 public interface SmartphoneService {
 
-    List<Smartphone> getAllSmartphones();
+    List<Smartphones> getAllSmartphones();
 
-    Smartphone saveSmartphone(Smartphone smartphone);
+    Smartphones saveSmartphone(Smartphones smartphones);
 
-    Smartphone updateSmartphone(Smartphone smartphone) throws Exception;
+    Smartphones updateSmartphone(Smartphones smartphones) throws Exception;
 
     void deleteSmartphone(int id) throws RecordNotFoundException;
 

@@ -1,7 +1,7 @@
 package com.smartphoneShop.backend.controller;
 
 
-import com.smartphoneShop.backend.dao.entity.Order;
+import com.smartphoneShop.backend.dao.entity.Orders;
 import com.smartphoneShop.backend.service.OrderService;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,18 +20,18 @@ public class OrderController {
     }
 
     @GetMapping()
-    public List<Order> getAllOrders(){
+    public List<Orders> getAllOrders(){
         return orderService.getAllOrders();
     }
 
     @PostMapping("/add")
-    public Order addOrder(@RequestBody Order order){
-        return orderService.addOrder(order);
+    public Orders addOrder(@RequestBody Orders orders){
+        return orderService.addOrder(orders);
     }
 
     @PutMapping
-    public Order updateOrder(@RequestBody Order order) throws Exception{
-        return orderService.updateOrder(order);
+    public Orders updateOrder(@RequestBody Orders orders) throws Exception{
+        return orderService.updateOrder(orders);
     }
 
 }

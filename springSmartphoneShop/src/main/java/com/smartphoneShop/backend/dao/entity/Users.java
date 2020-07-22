@@ -8,12 +8,13 @@ import com.smartphoneShop.backend.dao.enums.RoleType;
 import com.sun.istack.NotNull;
 import lombok.Data;
 
-@Entity(name = "USER")
+@Entity
+@Table(name = "users")
 @Data
 
-public class User implements Serializable {
+public class Users implements Serializable {
 
-    User() {
+    Users() {
     }
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,7 +37,7 @@ public class User implements Serializable {
     private RoleType roleType;
 
     @OneToMany
-    private List<Order> order;
+    private List<Orders> orders;
 
 
 }

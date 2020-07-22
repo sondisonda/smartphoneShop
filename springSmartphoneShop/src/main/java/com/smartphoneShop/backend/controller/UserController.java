@@ -1,6 +1,6 @@
 package com.smartphoneShop.backend.controller;
 
-import com.smartphoneShop.backend.dao.entity.User;
+import com.smartphoneShop.backend.dao.entity.Users;
 import com.smartphoneShop.backend.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,27 +20,27 @@ public class UserController {
     }
 
     @GetMapping
-    public List<User> getAll(){
+    public List<Users> getAll(){
         return userService.getAllUsers();
     }
 
 
     @PostMapping("/add")
-    public User addUser(@RequestBody User user){
-        return userService.addUser(user);
+    public Users addUser(@RequestBody Users users){
+        return userService.addUser(users);
     }
 
 
     @GetMapping("/get/{id}")
-    public User getById(@PathVariable int id) throws Exception{
+    public Users getById(@PathVariable int id) throws Exception{
         return userService.findById(id);
     }
 
     @PutMapping("/update/{id}")
-    public void updateUser(@PathVariable int id, @RequestBody User user) throws Exception {
-        User userData =userService.findById(id);
+    public void updateUser(@PathVariable int id, @RequestBody Users users) throws Exception {
+        Users usersData =userService.findById(id);
 
-        userService.updateUser(user);
+        userService.updateUser(users);
     }
 
 

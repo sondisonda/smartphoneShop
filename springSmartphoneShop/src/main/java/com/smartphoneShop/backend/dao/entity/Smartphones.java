@@ -8,13 +8,13 @@ import javax.persistence.*;
 import java.util.List;
 
 //Formatowanie!
-@Entity(name = "SMARTPHONE")
-
+@Entity
+@Table(name = "smartphones")
 @Data
-public class Smartphone {
+public class Smartphones {
 
 
-    Smartphone() {
+    Smartphones() {
     }
 
 
@@ -36,5 +36,5 @@ public class Smartphone {
 
 
     @ManyToMany
-    private List<Order> order;
+    private List<Orders> orders;
 }

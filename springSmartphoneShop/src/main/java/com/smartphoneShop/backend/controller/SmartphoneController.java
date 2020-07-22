@@ -1,7 +1,7 @@
 package com.smartphoneShop.backend.controller;
 
 
-import com.smartphoneShop.backend.dao.entity.Smartphone;
+import com.smartphoneShop.backend.dao.entity.Smartphones;
 import com.smartphoneShop.backend.service.SmartphoneService;
 import com.smartphoneShop.backend.exception.RecordNotFoundException;
 import org.springframework.http.HttpStatus;
@@ -22,19 +22,19 @@ public class SmartphoneController {
     }
 
     @GetMapping
-    public List<Smartphone> getAllSmartphones(){
+    public List<Smartphones> getAllSmartphones(){
         return smartphoneService.getAllSmartphones();
     }
 
     @PostMapping("/add")
-    public Smartphone addSmartphone(@RequestBody Smartphone smartphone){
-        return smartphoneService.saveSmartphone(smartphone);
+    public Smartphones addSmartphone(@RequestBody Smartphones smartphones){
+        return smartphoneService.saveSmartphone(smartphones);
     }
 
 
     @PutMapping
-    public Smartphone updateSmartphone(@RequestBody Smartphone smartphone) throws Exception{
-        return smartphoneService.updateSmartphone(smartphone);
+    public Smartphones updateSmartphone(@RequestBody Smartphones smartphones) throws Exception{
+        return smartphoneService.updateSmartphone(smartphones);
     }
 
     @DeleteMapping("/{id}")

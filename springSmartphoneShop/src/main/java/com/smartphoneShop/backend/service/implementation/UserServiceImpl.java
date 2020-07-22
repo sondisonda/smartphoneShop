@@ -1,6 +1,6 @@
 package com.smartphoneShop.backend.service.implementation;
 
-import com.smartphoneShop.backend.dao.entity.User;
+import com.smartphoneShop.backend.dao.entity.Users;
 import com.smartphoneShop.backend.repository.UserRepository;
 import com.smartphoneShop.backend.service.UserService;
 import org.springframework.stereotype.Service;
@@ -20,18 +20,18 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
-    public List<User> getAllUsers() {
+    public List<Users> getAllUsers() {
         return this.usersRepository.findAll();
     }
 
 //     może coś bardziej precyzyjnego niz exception
     @Override
-    public User findById(int id) throws Exception {
+    public Users findById(int id) throws Exception {
         return usersRepository.findById((int) id).orElseThrow(Exception::new);
     }
 
     @Override
-    public void updateUser(User user) {usersRepository.save(user); }
+    public void updateUser(Users users) {usersRepository.save(users); }
 
 
     @Override
@@ -40,7 +40,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User addUser(User user) { usersRepository.save(user);return user;  }
+    public Users addUser(Users users) { usersRepository.save(users);return users;  }
 
 
 

@@ -8,12 +8,13 @@ import java.util.Date;
 import java.util.List;
 
 
-@Entity(name = "ORDER")
+@Entity
+@Table(name = "orders")
 @Data
-public class Order {
+public class Orders {
 
 
-    Order() {
+    Orders() {
     }
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,9 +31,9 @@ public class Order {
     private Status status;// @NotNull
 
     @ManyToOne
-    private User user;
+    private Users users;
 
     @ManyToMany
-    private List<Smartphone> smartphone;
+    private List<Smartphones> smartphones;
 
 }

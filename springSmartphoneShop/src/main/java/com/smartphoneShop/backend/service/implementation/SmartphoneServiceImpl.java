@@ -1,6 +1,6 @@
 package com.smartphoneShop.backend.service.implementation;
 
-import com.smartphoneShop.backend.dao.entity.Smartphone;
+import com.smartphoneShop.backend.dao.entity.Smartphones;
 import com.smartphoneShop.backend.exception.RecordNotFoundException;
 import com.smartphoneShop.backend.repository.SmartphoneRepository;
 import com.smartphoneShop.backend.service.SmartphoneService;
@@ -20,18 +20,18 @@ public class SmartphoneServiceImpl implements SmartphoneService {
 
 
     @Override
-    public List<Smartphone> getAllSmartphones() {
+    public List<Smartphones> getAllSmartphones() {
         return this.smartphoneRepository.findAll();
     }
 
     @Override
-    public Smartphone saveSmartphone(Smartphone smartphone) {
-        return smartphoneRepository.save(smartphone);
+    public Smartphones saveSmartphone(Smartphones smartphones) {
+        return smartphoneRepository.save(smartphones);
     }
 
     @Override
-    public Smartphone updateSmartphone(Smartphone smartphone) throws Exception {
-        return smartphoneRepository.save(smartphone);
+    public Smartphones updateSmartphone(Smartphones smartphones) throws Exception {
+        return smartphoneRepository.save(smartphones);
     }
 
     @Override
