@@ -11,7 +11,7 @@ import {ConfirmDialogComponent} from 'src/app/views/confirm-dialog/confirm-dialo
 })
 export class StoreComponent implements OnInit {
 
-  private columnsToDisplay: string[] = ['id', 'brand', 'model', 'stock', 'prize'];
+  private columnsToDisplay: string[] = ['id', 'brand', 'model', 'stock', 'prize', 'buy'];
 
   smartphones: Smartphones[];
 
@@ -35,6 +35,6 @@ export class StoreComponent implements OnInit {
   }
 
 
-
+//TODO: BUY FUNCTION
 
 }

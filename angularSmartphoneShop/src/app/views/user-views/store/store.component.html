@@ -36,6 +36,14 @@
           <td mat-cell *matCellDef="let Smartphone">{{Smartphone.prize}}</td>
         </ng-container>
 
+        <ng-container matColumnDef="buy">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let Smartphone">
+            <button mat-icon-button (click)="editButtonClick()">
+              <mat-icon color="primary">shopping_bag</mat-icon>
+            </button>
+          </td>
+        </ng-container>
       
     
 
