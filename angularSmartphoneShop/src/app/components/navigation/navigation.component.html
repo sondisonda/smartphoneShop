@@ -3,15 +3,32 @@
 
     <h1>Smartphone Shop</h1>
     <span class="menu-spacer"></span>
-    <div *ngIf="loginMode">
-      <a  mat-button [routerLink]="'/smartphone-list'"> Smartphone list </a>
-      <a  mat-button [routerLink]="'/profile'"> Profile </a>
-      <a mat-button [routerLink]="'/order'"> Order </a>
+    <div *ngIf="_loginMode">
+
+
+
+      <div *ngIf="_adminMode">
+        <a mat-button  (click)="toggleUserMode()"> User  </a>
+        <a  mat-button [routerLink]="'/smartphone-list'"> Smartphone list </a>
+        <a  mat-button [routerLink]="'/user-list'"> User list </a>
+        <a  mat-button [routerLink]="'/order-list'"> Order list </a>
+
+      </div>
+
+      <div *ngIf="!_adminMode">
+        <a mat-button  (click)="toggleAdminMode()"> Admin xD  </a>
+        <a  mat-button [routerLink]="'/profile'"> Profile </a>
+        <a mat-button [routerLink]="'/order'"> Order </a>
+      </div>
       <a mat-button  (click)="logout()"> {{'GENERAL.LOGOUT' | translate}} </a>
     </div>
 
+
+
+
+
    
-    <div *ngIf="!loginMode">
+    <div *ngIf="!_loginMode">
       <a  mat-button [routerLink]="'/contact'"> Contact </a>
       <a mat-button  (click)="login()"> {{'GENERAL.LOGIN' | translate}}  </a>
     </div>

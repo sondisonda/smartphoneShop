@@ -36,4 +36,14 @@ public class Orders {
     @ManyToMany
     private List<Smartphones> smartphones;
 
+
+
+
+    public void addSmartphone(Smartphones smartphone) {
+        this.smartphones.add(smartphone);
+    }
+
+    public void removeSmartphone(Smartphones smartphone) {
+        this.smartphones.remove(smartphone);
+    }
 }

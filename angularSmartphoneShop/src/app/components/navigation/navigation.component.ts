@@ -9,7 +9,8 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class NavigationComponent implements OnInit {
 
-private loginMode = true;
+private _loginMode = true;
+private _adminMode = true;
 
 
 
@@ -21,14 +22,23 @@ private loginMode = true;
 
 
   login() {
-    this.loginMode = true;
+    this._loginMode = true;
   }
 
 
   logout() {
-    this.loginMode = false;
+    this._loginMode = false;
 
   }
 
+  toggleAdminMode(){
+    this._adminMode = true;
+
+  }
+
+  toggleUserMode(){
+    this._adminMode = false;
+
+  }
 
 }
