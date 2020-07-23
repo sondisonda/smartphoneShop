@@ -8,14 +8,14 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
+  // trupy!
+  private _loginMode = true;
+  private _adminMode = true;
 
-private _loginMode = true;
-private _adminMode = true;
 
 
-
-  constructor( private _translate: TranslateService
-    ) {  }
+  constructor(private _translate: TranslateService
+  ) { }
 
   ngOnInit() {
   }

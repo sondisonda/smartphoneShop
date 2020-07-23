@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
+//Formatowanie
 public class SmartphoneServiceImpl implements SmartphoneService {
 
 
@@ -38,6 +39,7 @@ public class SmartphoneServiceImpl implements SmartphoneService {
         try {
             smartphoneRepository.deleteById( id);
         }
+//        zbyt ogólny
         catch(Exception e){
             throw new RecordNotFoundException(message);
         }

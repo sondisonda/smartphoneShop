@@ -3,27 +3,28 @@ import { MatDialog, MatSnackBar, MatSort, MatTableDataSource } from '@angular/ma
 import { SmartphoneService } from 'src/app/application/services/smartphone/smartphone.service';
 import { Smartphones } from 'src/app/application/domain/external/smartphones';
 import { SmartphoneWindowComponent } from './smartphone-window/smartphone-window.component';
-import {ConfirmDialogComponent} from 'src/app/application/views/confirm-dialog/confirm-dialog.component';
+import { ConfirmDialogComponent } from 'src/app/application/views/confirm-dialog/confirm-dialog.component';
 
 @Component({
   selector: 'app-smartphone-list',
   templateUrl: './smartphone-list.component.html',
   styleUrls: ['./smartphone-list.component.css']
 })
+// formatowanie
 export class SmartphoneListComponent implements OnInit {
 
-
+  // private !!!
   private columnsToDisplay: string[] = ['id', 'brand', 'model', 'stock', 'prize', 'edit', 'delete'];
-
+  // publiczne?
   smartphones: Smartphones[];
-
+  // publiczne?
   dataSource: MatTableDataSource<Smartphones>;
 
 
-
+  // publiczne?
   emptyString = '';
 
-  constructor(public smartphoneService: SmartphoneService,  public dialog: MatDialog, ) {  }
+  constructor(public smartphoneService: SmartphoneService, public dialog: MatDialog,) { }
 
   ngOnInit() {
     this.reloadData();
@@ -71,7 +72,7 @@ export class SmartphoneListComponent implements OnInit {
 
 
   eraseButtonClick(id: number) {
-    const dialogConfirm  = this.dialog.open(ConfirmDialogComponent, {
+    const dialogConfirm = this.dialog.open(ConfirmDialogComponent, {
       width: '3000',
       data: this.smartphones[id].model
     });
@@ -79,6 +80,7 @@ export class SmartphoneListComponent implements OnInit {
     dialogConfirm.afterClosed().subscribe(confirm => {
       if (confirm) {
         this.smartphoneService.deleteSmartphone(this.smartphones[id]).subscribe(info => {
+          // copy pasta.....
           console.log(info);
           this.reloadData();
         });

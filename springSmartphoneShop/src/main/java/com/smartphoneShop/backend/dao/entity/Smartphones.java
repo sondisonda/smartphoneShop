@@ -7,7 +7,7 @@ import lombok.Data;
 import javax.persistence.*;
 import java.util.List;
 
-//Formatowanie!
+//Formatowanie!!!
 @Entity
 @Table(name = "smartphones")
 @Data

@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './angular-material.component.html',
   styleUrls: ['./angular-material.component.css']
 })
+//  moduł nie komponent
 export class AngularMaterialComponent implements OnInit {
 
   constructor() { }

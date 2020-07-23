@@ -6,13 +6,14 @@ import com.smartphoneShop.backend.service.OrderService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-// Może się da globalnie ustawić?
+// Może się da globalnie ustawić???
 @CrossOrigin(origins = "http://localhost:4200")
 
 @RestController
 @RequestMapping("api/orders")
-public class OrderController {
-    private final OrderService orderService;
+public class OrdersController {
+// Pola prywane!!!!!!
+    OrderService orderService;
 
 
     public OrderController(OrderService ordersService){

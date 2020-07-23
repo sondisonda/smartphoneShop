@@ -7,13 +7,14 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+// formatownaie
 export class LoginComponent implements OnInit {
 
 
-
+  // trupy
   private userName = '';
   private password = '';
-
+  // trupy
   private loginWarn = '';
   private loginForm: FormGroup;
 
@@ -22,7 +23,7 @@ export class LoginComponent implements OnInit {
     this.createForm();
   }
 
-
+  // po co to
   ngOnInit() {
 
   }
