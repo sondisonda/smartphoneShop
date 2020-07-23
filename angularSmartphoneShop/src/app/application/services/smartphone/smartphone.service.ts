@@ -26,11 +26,11 @@ constructor(private http: HttpClient) { }
 
 
 public addSmartphone(smartphone: Smartphones): Observable<Smartphones> {
-  return this.http.post<Smartphones>(this.URL + '/add', smartphone);
+  return this.http.post<Smartphones>(this.URL , smartphone);
 }
 
 public deleteSmartphone(smartphone: Smartphones): Observable<any> {
-  return this.http.delete(this.URL + '/'+ smartphone.id, {responseType: 'text'});
+  return this.http.delete(this.URL + '/' + smartphone.id, {responseType: 'text'});
 }
 public updateSmartphone(smartphone: Smartphones): Observable<Smartphones> {
   return this.http.put<Smartphones>(this.URL, smartphone);

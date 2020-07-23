@@ -26,19 +26,18 @@ public class SmartphoneController {
         return smartphoneService.getAllSmartphones();
     }
 
-    @PostMapping("/add")
+    @PostMapping
     public Smartphones addSmartphone(@RequestBody Smartphones smartphones){
         return smartphoneService.saveSmartphone(smartphones);
     }
 
 
     @PutMapping
-    public Smartphones updateSmartphone(@RequestBody Smartphones smartphones) throws Exception{
+    public Smartphones updateSmartphone(@RequestBody Smartphones smartphones) {
         return smartphoneService.updateSmartphone(smartphones);
     }
 
     @DeleteMapping("/{id}")
-    @ResponseStatus(HttpStatus.ACCEPTED)
     public void deleteSmartphone(@PathVariable int id) throws RecordNotFoundException {
         this.smartphoneService.deleteSmartphone(id);
     }

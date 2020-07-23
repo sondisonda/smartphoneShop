@@ -19,12 +19,12 @@ public class OrderController {
         this.orderService = ordersService;
     }
 
-    @GetMapping()
+    @GetMapping
     public List<Orders> getAllOrders(){
         return orderService.getAllOrders();
     }
 
-    @PostMapping("/add")
+    @PostMapping
     public Orders addOrder(@RequestBody Orders orders){
         return orderService.addOrder(orders);
     }

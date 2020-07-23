@@ -20,12 +20,10 @@ export class OrderService {
    return this.http.get<Orders[]>(this.URL);
  }
  
- 
  public addOrder(order: Orders): Observable<Orders> {
-   return this.http.post<Orders>(this.URL + '/add', order);
+   return this.http.post<Orders>(this.URL , order);
  }
  
-
  public updateOrder(order: Orders): Observable<Orders> {
    return this.http.put<Orders>(this.URL, order);
  }

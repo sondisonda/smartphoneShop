@@ -30,9 +30,7 @@ public class SmartphoneServiceImpl implements SmartphoneService {
     }
 
     @Override
-    public Smartphones updateSmartphone(Smartphones smartphones) throws Exception {
-        return smartphoneRepository.save(smartphones);
-    }
+    public Smartphones updateSmartphone(Smartphones smartphones)  { return smartphoneRepository.save(smartphones); }
 
     @Override
     public void deleteSmartphone(int id) throws RecordNotFoundException{

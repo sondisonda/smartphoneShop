@@ -25,7 +25,7 @@ constructor(private http: HttpClient) { }
 
 
 public addUser(user: Users): Observable<Users> {
-  return this.http.post<Users>(this.URL + '/add', user);
+  return this.http.post<Users>(this.URL, user);
 }
 
 public deleteUser(user: Users): Observable<any> {
