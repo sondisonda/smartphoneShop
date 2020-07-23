@@ -1,6 +1,7 @@
 package com.smartphoneShop.backend.controller;
 
 import com.smartphoneShop.backend.dao.entity.Users;
+import com.smartphoneShop.backend.exception.RecordNotFoundException;
 import com.smartphoneShop.backend.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,12 +33,12 @@ public class UserController {
 
 
     @GetMapping("/get/{id}")
-    public Users getById(@PathVariable int id) throws Exception{
+    public Users getById(@PathVariable int id) throws RecordNotFoundException{
         return userService.findById(id);
     }
 
     @PutMapping("/update/{id}")
-    public void updateUser(@PathVariable int id, @RequestBody Users users) throws Exception {
+    public void updateUser(@PathVariable int id, @RequestBody Users users) throws RecordNotFoundException {
         Users usersData =userService.findById(id);
 
         userService.updateUser(users);

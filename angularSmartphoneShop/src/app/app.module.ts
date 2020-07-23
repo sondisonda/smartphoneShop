@@ -24,6 +24,7 @@ import { UserWindowComponent } from './views/admin-views/user-list/user-window/u
 import { OrderListComponent } from './views/admin-views/order-list/order-list.component';
 import { OrderWindowComponent } from './views/admin-views/order-list/order-window/order-window.component';
 import { StoreComponent } from './views/user-views/store/store.component';
+import { StoreWindowComponent } from './views/user-views/store/store-window/store-window.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
    return new TranslateHttpLoader(httpClient);
@@ -46,6 +47,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       OrderListComponent,
       OrderWindowComponent,
       StoreComponent,
+      StoreWindowComponent,
 
    ],
    entryComponents: [
@@ -54,6 +56,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       ConfirmDialogComponent,
       UserWindowComponent,
       OrderWindowComponent,
+      StoreWindowComponent,
     ],
    imports: [
       BrowserModule,

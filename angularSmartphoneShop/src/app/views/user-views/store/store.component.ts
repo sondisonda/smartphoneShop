@@ -3,6 +3,7 @@ import { MatDialog, MatSnackBar, MatSort, MatTableDataSource } from '@angular/ma
 import { SmartphoneService } from 'src/app/services/smartphone/smartphone.service';
 import { Smartphones } from 'src/app/domain/external/smartphones';
 import {ConfirmDialogComponent} from 'src/app/views/confirm-dialog/confirm-dialog.component';
+import {StoreWindowComponent} from 'src/app/views/user-views/store/store-window/store-window.component';
 
 @Component({
   selector: 'app-store',
@@ -35,6 +36,31 @@ export class StoreComponent implements OnInit {
   }
 
 
-//TODO: BUY FUNCTION
+
+buyClick(index: number) {
+
+if (this.smartphones[index].stock > 0) {
+  const dialogRef = this.dialog.open(StoreWindowComponent, {
+    width: '800px',
+    data: this.smartphones[index]
+  });
+
+  dialogRef.afterClosed().subscribe(smartphones => {
+    if (smartphones) {
+      this.smartphones[index].stock = this.smartphones[index].stock - 1;
+      this.smartphoneService.updateSmartphone(smartphones).subscribe(data => {
+        this.reloadData();
+      });
+    }
+  });
+} else {
+console.log('No stock');
+}
+
+}
+
+
+
+
 
 }

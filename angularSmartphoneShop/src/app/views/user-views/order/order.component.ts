@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatSnackBar, MatSort, MatTableDataSource } from '@angular/material';
+import {ConfirmDialogComponent} from 'src/app/views/confirm-dialog/confirm-dialog.component';
+import { Orders } from 'src/app/domain/external/orders';
+import { OrderService } from 'src/app/services/order/order.service';
 
 @Component({
   selector: 'app-order',
@@ -7,9 +11,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderComponent implements OnInit {
 
-  constructor() { }
+
+  private columnsToDisplay: string[] = ['id', 'value' , 'edit'];
+
+  orders: Orders[];
+
+  dataSource: MatTableDataSource<Orders>;
+
+
+
+  emptyString = '';
+
+  constructor(public orderService: OrderService,  public dialog: MatDialog, ) {  }
 
   ngOnInit() {
+    this.reloadData();
   }
+
+  reloadData() {
+    this.orderService.getAllOrders().subscribe(data => {
+      this.orders = data;
+      this.dataSource = new MatTableDataSource<Orders>(this.orders);
+    });
+  }
+
+
+
+
+
+
 
 }
