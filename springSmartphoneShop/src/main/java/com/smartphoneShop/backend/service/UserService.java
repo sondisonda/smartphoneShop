@@ -13,7 +13,7 @@ public interface UserService {
 
     void updateUser(Users users);
 
-    Users findById(int id) throws  RecordNotFoundException;
+    Users findById(int id) throws RecordNotFoundException;
 
     Users addUser(Users users);
 

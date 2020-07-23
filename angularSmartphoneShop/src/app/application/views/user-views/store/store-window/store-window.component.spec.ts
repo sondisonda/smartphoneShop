@@ -11,9 +11,9 @@ describe('StoreWindowComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StoreWindowComponent ]
+      declarations: [StoreWindowComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

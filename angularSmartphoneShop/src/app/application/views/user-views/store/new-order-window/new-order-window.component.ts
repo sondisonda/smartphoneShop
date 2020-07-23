@@ -1,6 +1,5 @@
 import { Component, Inject, OnInit, Input } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { OrderService } from 'src/app/application/services/order/order.service';
 import { Orders } from 'src/app/application/domain/external/orders';
 
@@ -9,7 +8,6 @@ import { Orders } from 'src/app/application/domain/external/orders';
   templateUrl: './new-order-window.component.html',
   styleUrls: ['./new-order-window.component.css']
 })
-// copy pasta
 export class NewOrderWindowComponent implements OnInit {
 
   constructor(public dialogRef: MatDialogRef<NewOrderWindowComponent>,

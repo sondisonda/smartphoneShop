@@ -52,9 +52,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Users addUser(Users users) {
-//        usersRepository sam z siebie zwraca :)
-        usersRepository.save(users);
-        return users;
+        return usersRepository.save(users);
     }
 
     @Override
@@ -63,7 +61,7 @@ public class UserServiceImpl implements UserService {
 //            poczytaj o streamch
             for (Users users : usersRepository.findAll()) {
 //                equals!!!!! to nie JS/TS
-                if (users.getUserName() == userName && users.getPassword() == password) {
+                if (users.getUserName().equals(userName) && users.getPassword().equals(password)) {
                     return usersRepository.findById(users.getId()).orElseThrow(() -> new RecordNotFoundException(message));
                 }
             }

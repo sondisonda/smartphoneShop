@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatSnackBar, MatSort, MatTableDataSource } from '@angular/material';
-import { ConfirmDialogComponent } from 'src/app/application/views/confirm-dialog/confirm-dialog.component';
 import { Orders } from 'src/app/application/domain/external/orders';
 import { OrderService } from 'src/app/application/services/order/order.service';
 import { OrderWindowComponent } from './order-window/order-window.component';
@@ -10,8 +9,7 @@ import { OrderWindowComponent } from './order-window/order-window.component';
   templateUrl: './order-list.component.html',
   styleUrls: ['./order-list.component.css']
 })
-// formatowanie
-//  Kolejny komponent przeklejony bez sprawdzenia!!!!!!!!!!!!!!!
+// 
 export class OrderListComponent implements OnInit {
 
 
@@ -20,10 +18,6 @@ export class OrderListComponent implements OnInit {
   orders: Orders[];
 
   dataSource: MatTableDataSource<Orders>;
-
-
-
-  emptyString = '';
 
   constructor(public orderService: OrderService, public dialog: MatDialog,) { }
 

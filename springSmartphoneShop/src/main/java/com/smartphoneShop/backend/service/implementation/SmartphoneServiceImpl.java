@@ -5,6 +5,7 @@ import com.smartphoneShop.backend.exception.RecordNotFoundException;
 import com.smartphoneShop.backend.repository.SmartphoneRepository;
 import com.smartphoneShop.backend.service.SmartphoneService;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 @Service
@@ -31,16 +32,18 @@ public class SmartphoneServiceImpl implements SmartphoneService {
     }
 
     @Override
-    public Smartphones updateSmartphone(Smartphones smartphones)  { return smartphoneRepository.save(smartphones); }
+    public Smartphones updateSmartphone(Smartphones smartphones) {
+        return smartphoneRepository.save(smartphones);
+    }
 
     @Override
-    public void deleteSmartphone(int id) throws RecordNotFoundException{
+    public void deleteSmartphone(int id) throws RecordNotFoundException {
 
         try {
-            smartphoneRepository.deleteById( id);
+            smartphoneRepository.deleteById(id);
         }
 //        zbyt ogólny
-        catch(Exception e){
+        catch (Exception e) {
             throw new RecordNotFoundException(message);
         }
     }

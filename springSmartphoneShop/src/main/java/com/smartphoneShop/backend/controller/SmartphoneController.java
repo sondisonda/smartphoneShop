@@ -17,17 +17,17 @@ public class SmartphoneController {
     private final SmartphoneService smartphoneService;
 
 
-    public SmartphoneController(SmartphoneService smartphonesService){
+    public SmartphoneController(SmartphoneService smartphonesService) {
         this.smartphoneService = smartphonesService;
     }
 
     @GetMapping
-    public List<Smartphones> getAllSmartphones(){
+    public List<Smartphones> getAllSmartphones() {
         return smartphoneService.getAllSmartphones();
     }
 
     @PostMapping
-    public Smartphones addSmartphone(@RequestBody Smartphones smartphones){
+    public Smartphones addSmartphone(@RequestBody Smartphones smartphones) {
         return smartphoneService.saveSmartphone(smartphones);
     }
 
@@ -41,5 +41,5 @@ public class SmartphoneController {
         this.smartphoneService.deleteSmartphone(id);
     }
 
-      
+
 }

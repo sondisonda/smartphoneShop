@@ -12,7 +12,7 @@ public interface SmartphoneService {
 
     Smartphones saveSmartphone(Smartphones smartphones);
 
-    Smartphones updateSmartphone(Smartphones smartphones) ;
+    Smartphones updateSmartphone(Smartphones smartphones);
 
     void deleteSmartphone(int id) throws RecordNotFoundException;
 

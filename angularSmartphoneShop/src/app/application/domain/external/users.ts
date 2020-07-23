@@ -1,16 +1,12 @@
 import { Roletype } from '../enum/roletype.enum';
 
-
-
-
 export class Users {
-  // yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
-  constructor(public id?: number, public userName: string = '', public password: string = '', public firstName: string = '', public lastName: string = '', public roleType: Roletype = 1) {
-    this.id = id;
-    this.userName = userName;
-    this.password = password;
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.roleType = roleType;
-  }
+
+  id: number;
+  userName: string;
+  password: string;
+  firstName: string;
+  lastName: string;
+  roleType: Roletype;
+
 }

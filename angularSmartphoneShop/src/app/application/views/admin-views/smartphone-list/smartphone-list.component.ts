@@ -13,16 +13,12 @@ import { ConfirmDialogComponent } from 'src/app/application/views/confirm-dialog
 // formatowanie
 export class SmartphoneListComponent implements OnInit {
 
-  // private !!!
   private columnsToDisplay: string[] = ['id', 'brand', 'model', 'stock', 'prize', 'edit', 'delete'];
-  // publiczne?
-  smartphones: Smartphones[];
-  // publiczne?
-  dataSource: MatTableDataSource<Smartphones>;
+  private smartphones: Smartphones[];
+  private dataSource: MatTableDataSource<Smartphones>;
 
 
-  // publiczne?
-  emptyString = '';
+
 
   constructor(public smartphoneService: SmartphoneService, public dialog: MatDialog,) { }
 

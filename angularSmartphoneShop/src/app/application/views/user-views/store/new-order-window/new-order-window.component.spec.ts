@@ -11,9 +11,9 @@ describe('NewOrderWindowComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NewOrderWindowComponent ]
+      declarations: [NewOrderWindowComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

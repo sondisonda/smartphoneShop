@@ -7,16 +7,13 @@ import lombok.Data;
 import javax.persistence.*;
 import java.util.List;
 
-//Formatowanie!!!
 @Entity
 @Table(name = "smartphones")
 @Data
 public class Smartphones {
 
-
     Smartphones() {
     }
-
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id

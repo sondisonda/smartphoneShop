@@ -9,7 +9,6 @@ import { Smartphones } from 'src/app/application/domain/external/smartphones';
   templateUrl: './smartphone-window.component.html',
   styleUrls: ['./smartphone-window.component.css']
 })
-// formatowanie
 export class SmartphoneWindowComponent implements OnInit {
 
   constructor(public dialogRef: MatDialogRef<SmartphoneWindowComponent>,

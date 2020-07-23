@@ -14,16 +14,11 @@ export class UserService {
 
   private URL = environment.urlUsers;
 
-
-
   constructor(private http: HttpClient) { }
-
-
 
   getAllUsers(): Observable<Users[]> {
     return this.http.get<Users[]>(this.URL);
   }
-
 
   public addUser(user: Users): Observable<Users> {
     return this.http.post<Users>(this.URL, user);
