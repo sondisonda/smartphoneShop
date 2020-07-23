@@ -7,9 +7,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
+// formatowanie
 export class RegisterComponent implements OnInit {
 
-
+  // trupy
   private userName = '';
   private password = '';
   private firstName = '';

@@ -31,7 +31,6 @@ public class SmartphoneController {
         return smartphoneService.saveSmartphone(smartphones);
     }
 
-
     @PutMapping
     public Smartphones updateSmartphone(@RequestBody Smartphones smartphones) {
         return smartphoneService.updateSmartphone(smartphones);

@@ -9,31 +9,32 @@ import { Users } from 'src/app/application/domain/external/users';
 @Injectable({
   providedIn: 'root'
 })
+//  formatowanie
 export class UserService {
 
   private URL = environment.urlUsers;
 
 
 
-constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
 
 
- getAllUsers(): Observable<Users[]> {
-  return this.http.get<Users[]>(this.URL);
-}
+  getAllUsers(): Observable<Users[]> {
+    return this.http.get<Users[]>(this.URL);
+  }
 
 
-public addUser(user: Users): Observable<Users> {
-  return this.http.post<Users>(this.URL, user);
-}
+  public addUser(user: Users): Observable<Users> {
+    return this.http.post<Users>(this.URL, user);
+  }
 
-public deleteUser(user: Users): Observable<any> {
-  return this.http.delete(this.URL + '/' + user.id, {responseType: 'text'});
-}
-public updateUser(user: Users): Observable<Users> {
-  return this.http.put<Users>(this.URL, user);
-}
+  public deleteUser(user: Users): Observable<any> {
+    return this.http.delete(this.URL + '/' + user.id, { responseType: 'text' });
+  }
+  public updateUser(user: Users): Observable<Users> {
+    return this.http.put<Users>(this.URL, user);
+  }
 
 
 

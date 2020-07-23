@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatSnackBar, MatSort, MatTableDataSource } from '@angular/material';
-import {ConfirmDialogComponent} from 'src/app/application/views/confirm-dialog/confirm-dialog.component';
+import { ConfirmDialogComponent } from 'src/app/application/views/confirm-dialog/confirm-dialog.component';
 import { Orders } from 'src/app/application/domain/external/orders';
 import { OrderService } from 'src/app/application/services/order/order.service';
 
@@ -9,10 +9,11 @@ import { OrderService } from 'src/app/application/services/order/order.service';
   templateUrl: './order.component.html',
   styleUrls: ['./order.component.css']
 })
+// copy pasta
 export class OrderComponent implements OnInit {
 
 
-  private columnsToDisplay: string[] = ['id', 'value' , 'edit'];
+  private columnsToDisplay: string[] = ['id', 'value', 'edit'];
 
   orders: Orders[];
 
@@ -22,7 +23,7 @@ export class OrderComponent implements OnInit {
 
   emptyString = '';
 
-  constructor(public orderService: OrderService,  public dialog: MatDialog, ) {  }
+  constructor(public orderService: OrderService, public dialog: MatDialog,) { }
 
   ngOnInit() {
     this.reloadData();

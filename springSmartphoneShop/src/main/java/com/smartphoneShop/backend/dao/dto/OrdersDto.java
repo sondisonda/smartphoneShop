@@ -10,6 +10,6 @@ public class OrdersDto {
     private long userId;
     private Timestamp date;
     private int value;
-    private int status; //tmp enum
+    private int status; //tmp enum!!
 
 }

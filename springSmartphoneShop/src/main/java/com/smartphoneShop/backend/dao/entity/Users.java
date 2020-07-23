@@ -11,7 +11,7 @@ import lombok.Data;
 @Entity
 @Table(name = "users")
 @Data
-
+//
 public class Users implements Serializable {
 
     Users() {

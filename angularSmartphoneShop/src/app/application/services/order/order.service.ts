@@ -7,6 +7,7 @@ import { Orders } from 'src/app/application/domain/external/orders';
 @Injectable({
   providedIn: 'root'
 })
+//  formatowanie
 export class OrderService {
 
   private URL = environment.urlOrders;
@@ -17,16 +18,16 @@ export class OrderService {
 
 
   public getAllOrders(): Observable<Orders[]> {
-   return this.http.get<Orders[]>(this.URL);
- }
- 
- public addOrder(order: Orders): Observable<Orders> {
-   return this.http.post<Orders>(this.URL , order);
- }
- 
- public updateOrder(order: Orders): Observable<Orders> {
-   return this.http.put<Orders>(this.URL, order);
- }
- 
- 
+    return this.http.get<Orders[]>(this.URL);
+  }
+
+  public addOrder(order: Orders): Observable<Orders> {
+    return this.http.post<Orders>(this.URL, order);
+  }
+
+  public updateOrder(order: Orders): Observable<Orders> {
+    return this.http.put<Orders>(this.URL, order);
+  }
+
+
 }

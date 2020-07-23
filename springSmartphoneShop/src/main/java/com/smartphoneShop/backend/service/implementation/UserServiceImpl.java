@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-// Formatowanie!
+// Formatowanie!!
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -27,12 +27,12 @@ public class UserServiceImpl implements UserService {
         return this.usersRepository.findAll();
     }
 
-    //     może coś bardziej precyzyjnego niz exception
     @Override
     public Users findById(int id) throws RecordNotFoundException {
         try {
             return usersRepository.findById((int) id).orElseThrow(() -> new RecordNotFoundException(message));
 
+//            No ale tu też jest exception xD
         } catch (Exception e) {
             throw new RecordNotFoundException(message);
         }
@@ -52,6 +52,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Users addUser(Users users) {
+//        usersRepository sam z siebie zwraca :)
         usersRepository.save(users);
         return users;
     }
@@ -59,15 +60,18 @@ public class UserServiceImpl implements UserService {
     @Override
     public Users loginUser(String userName, String password) throws RecordNotFoundException {
         try {
+//            poczytaj o streamch
             for (Users users : usersRepository.findAll()) {
+//                equals!!!!! to nie JS/TS
                 if (users.getUserName() == userName && users.getPassword() == password) {
                     return usersRepository.findById(users.getId()).orElseThrow(() -> new RecordNotFoundException(message));
                 }
             }
-
+// Zbyt ogólny
         } catch (Exception e) {
             throw new RecordNotFoundException(message);
         }
+//        wtf?
         return null;
     }
 

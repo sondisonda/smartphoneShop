@@ -7,11 +7,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
-//  Formatowanie na 4 taby ;)
+//  Formatowanie na 4 taby ;)!!!
 export class ProfileComponent implements OnInit {
 
 
-  //   zmienne prywatne zaczynamy od _
+  //   zmienne prywatne zaczynamy od _!!!!!
   private userName = '';
   private password = '';
   private firstName = '';

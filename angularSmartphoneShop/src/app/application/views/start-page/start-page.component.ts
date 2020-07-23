@@ -5,13 +5,15 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './start-page.component.html',
   styleUrls: ['./start-page.component.css']
 })
-        export class StartPageComponent implements OnInit {
-
+// formatowanie?
+export class StartPageComponent implements OnInit {
+  // trupy
   private _registerMode = false;
   private _loginMode = false;
 
   constructor() { }
 
+  // po co to
   ngOnInit() {
   }
 

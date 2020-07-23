@@ -10,31 +10,32 @@ import { Smartphones } from 'src/app/application/domain/external/smartphones';
 @Injectable({
   providedIn: 'root'
 })
+//  formatowanie
 export class SmartphoneService {
 
   private URL = environment.urlSmartphones;
 
 
 
-constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
 
 
- getAllSmartphones(): Observable<Smartphones[]> {
-  return this.http.get<Smartphones[]>(this.URL);
-}
+  getAllSmartphones(): Observable<Smartphones[]> {
+    return this.http.get<Smartphones[]>(this.URL);
+  }
 
 
-public addSmartphone(smartphone: Smartphones): Observable<Smartphones> {
-  return this.http.post<Smartphones>(this.URL , smartphone);
-}
+  public addSmartphone(smartphone: Smartphones): Observable<Smartphones> {
+    return this.http.post<Smartphones>(this.URL, smartphone);
+  }
 
-public deleteSmartphone(smartphone: Smartphones): Observable<any> {
-  return this.http.delete(this.URL + '/' + smartphone.id, {responseType: 'text'});
-}
-public updateSmartphone(smartphone: Smartphones): Observable<Smartphones> {
-  return this.http.put<Smartphones>(this.URL, smartphone);
-}
+  public deleteSmartphone(smartphone: Smartphones): Observable<any> {
+    return this.http.delete(this.URL + '/' + smartphone.id, { responseType: 'text' });
+  }
+  public updateSmartphone(smartphone: Smartphones): Observable<Smartphones> {
+    return this.http.put<Smartphones>(this.URL, smartphone);
+  }
 
 
 
