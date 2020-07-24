@@ -1,6 +1,10 @@
 import { Component, OnInit, Input, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+import { UserService } from 'src/app/application/services/user/user.service';
+import { LoginService } from 'src/app/application/services/login/login.service';
+import { Router } from '@angular/router';
+import { Users } from 'src/app/application/domain/external/users';
 
 @Component({
   selector: 'app-login',
@@ -8,26 +12,26 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 // formatownaie
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
 
   // trupy
+  private logged = false;
   private userName = '';
   private password = '';
-  // trupy
-  private loginWarn = '';
+  private loginWarn: '';
   private loginForm: FormGroup;
+  private signedUser: Users;
 
 
-  constructor(private formBuilder: FormBuilder) {
+
+  constructor(
+    public loginService: LoginService,
+    private router: Router,
+    private usersService: UserService,
+    private formBuilder: FormBuilder) {
     this.createForm();
   }
-
-  // po co to
-  ngOnInit() {
-
-  }
-
 
   createForm() {
     this.loginForm = this.formBuilder.group({
@@ -42,8 +46,35 @@ export class LoginComponent implements OnInit {
     return this.loginForm.controls;
   }
 
+  
   login() {
-    console.log('Logowanie');
-
+    this.userName = this.loginForm.get('userName').value;
+    this.password = this.loginForm.get('password').value;
+    this.usersService.loginUser(this.userName, this.password).subscribe((user: any) => {
+      this.signedUser = user;
+      if (this.signedUser) {
+        this.loginService.updateCurrentRole(this.signedUser.roleType);
+        this.loginService.updateCurrentUser(this.signedUser);
+        this.loginWarn = '';
+        this.logged = true;
+        this.router.navigateByUrl('store');
+      } else {
+        this.loginWarn = 'Incorrect username or password';
+      }
+    });
   }
+
+  signOut() {
+    this.logged = false;
+    this.loginService.role = null;
+    this.loginService.user = null;
+    this.router.navigateByUrl('start-page');
+  }
+
+  getLoginWarn(): string  {
+    return this.loginWarn;
+  }
+
+
+
 }

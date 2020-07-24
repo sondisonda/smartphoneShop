@@ -1,32 +1,35 @@
-  <mat-card-header>
+<mat-card-header>
     <div class="header center">
-      <mat-card-title>Login</mat-card-title>
+        <mat-card-title>Login</mat-card-title>
     </div>
-  </mat-card-header>
-  <form [formGroup]="loginForm" (ngSubmit)="login()">
+</mat-card-header>
+<form [formGroup]="loginForm" (ngSubmit)="login()">
     <mat-card-content>
-      <table cellspacing="0">
-        <tr>
-          <td>
-            <mat-form-field appearance="outline">
-              <input matInput type="text" id="userName" placeholder="Username" formControlName="userName" required >
-              <mat-error *ngIf="!userName.valid"> Username is required between 4 and 12 characters </mat-error>
-            </mat-form-field>
-          </td>
-        </tr>
-        <tr>
-          <td>
-              <mat-form-field appearance="outline">
-              <input matInput type="password" id="password" placeholder="Password" formControlName="password" required>
-              <mat-error *ngIf="!password.valid"> Password is required between 4 and 12 characters </mat-error>
-            </mat-form-field>
-          </td>
-        </tr>
-      </table>
+        <table cellspacing="0">
+            <tr>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <input matInput type="text" placeholder="Username" formControlName="userName" required>
+                        <mat-error *ngIf="!userName.valid"> Username is required between 4 and 12 characters </mat-error>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <input matInput type="password" placeholder="Password" formControlName="password" required>
+                        <mat-error *ngIf="!password.valid"> Password is required between 4 and 12 characters </mat-error>
+                    </mat-form-field>
+                </td>
+            </tr>
+        </table>
     </mat-card-content>
     <mat-card-actions>
-      <div class="actions">
-        <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">LOG IN</button>
-      </div>
+        <div class="actions">
+            <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">LOG IN</button>
+        </div>
+        <div class="warn"> {{this.getLoginWarn()}}
+
+        </div>
     </mat-card-actions>
-  </form>
+</form>

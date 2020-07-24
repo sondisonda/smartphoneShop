@@ -1,5 +1,6 @@
 package com.smartphoneShop.backend.service;
 
+import com.smartphoneShop.backend.dao.body.LoginBody;
 import com.smartphoneShop.backend.dao.entity.Users;
 import com.smartphoneShop.backend.exception.RecordNotFoundException;
 
@@ -17,7 +18,7 @@ public interface UserService {
 
     Users addUser(Users users);
 
-    Users loginUser(String userName, String password) throws RecordNotFoundException;
+    Users loginUser(LoginBody loginBody) throws RecordNotFoundException;
 }
 
 

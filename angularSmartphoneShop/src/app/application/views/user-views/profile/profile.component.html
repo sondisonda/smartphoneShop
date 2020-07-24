@@ -1,47 +1,44 @@
 <mat-card-header>
-  <div class="header center">
-    <mat-card-title>Edit profile</mat-card-title>
-  </div>
+    <div class="header center">
+        <mat-card-title>Edit profile</mat-card-title>
+    </div>
 </mat-card-header>
 <form [formGroup]="profileForm" (ngSubmit)="login()">
-  <mat-card-content>
-    <table cellspacing="0">
-      <tr>
-        <td>
-          <mat-form-field appearance="outline">
-            <input matInput type="text" id="username" placeholder="Username" autocomplete="off"
-                   formControlName="userName" required >
-          </mat-form-field>
-        </td>
-      </tr>
-      <tr>
-        <td>
-            <mat-form-field appearance="outline">
-            <input matInput type="password" id="password" placeholder="Password" formControlName="password" required>
-          </mat-form-field>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <mat-form-field appearance="outline">
-            <input matInput type="text" id="firstName" placeholder="Firstname" autocomplete="off"
-                   formControlName="firstName" required >
-          </mat-form-field>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <mat-form-field appearance="outline">
-            <input matInput type="text" id="lastName" placeholder="Lastname" autocomplete="off"
-                   formControlName="lastName" required >
-          </mat-form-field>
-        </td>
-      </tr>
-    </table>
-  </mat-card-content>
-  <mat-card-actions>
-    <div class="actions">
-      <button mat-raised-button color="primary" type="submit" [disabled]="!profileForm.valid">Register</button>
-    </div>
-  </mat-card-actions>
+    <mat-card-content>
+        <table cellspacing="0">
+            <tr>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <input matInput type="text" id="username" placeholder="Username" autocomplete="off" formControlName="_userName" required>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <input matInput type="password" id="password" placeholder="Password" formControlName="_password" required>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <input matInput type="text" id="firstName" placeholder="Firstname" autocomplete="off" formControlName="_firstName" required>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <input matInput type="text" id="lastName" placeholder="Lastname" autocomplete="off" formControlName="_lastName" required>
+                    </mat-form-field>
+                </td>
+            </tr>
+        </table>
+    </mat-card-content>
+    <mat-card-actions>
+        <div class="actions">
+            <button mat-raised-button color="primary" type="submit" [disabled]="!profileForm.valid">Register</button>
+        </div>
+    </mat-card-actions>
 </form>

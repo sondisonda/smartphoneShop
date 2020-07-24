@@ -11,7 +11,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ProfileComponent implements OnInit {
 
 
-  //   zmienne prywatne zaczynamy od _!!!!!
+ 
   private _userName = '';
   private _password = '';
   private _firstName = '';

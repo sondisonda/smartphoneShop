@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Users } from 'src/app/application/domain/external/users';
-
+import { LoginBody } from 'src/app/application/domain/external/login-body';
 
 
 @Injectable({
@@ -31,7 +31,10 @@ export class UserService {
     return this.http.put<Users>(this.URL, user);
   }
 
-
+  loginUser(username: string, password: string): Observable<any> {
+    const body = new LoginBody(username, password);
+    return this.http.post<UserService>(this.URL + '/' + 'login', body);
+  }
 
 
 

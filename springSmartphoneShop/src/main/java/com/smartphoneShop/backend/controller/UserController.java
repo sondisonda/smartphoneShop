@@ -1,5 +1,6 @@
 package com.smartphoneShop.backend.controller;
 
+import com.smartphoneShop.backend.dao.body.LoginBody;
 import com.smartphoneShop.backend.dao.entity.Users;
 import com.smartphoneShop.backend.exception.RecordNotFoundException;
 import com.smartphoneShop.backend.service.UserService;
@@ -30,7 +31,6 @@ public class UserController {
         return userService.addUser(users);
     }
 
-
     @GetMapping("/get/{id}")
     public Users getById(@PathVariable int id) throws RecordNotFoundException {
         return userService.findById(id);
@@ -43,11 +43,14 @@ public class UserController {
         userService.updateUser(users);
     }
 
-
     @DeleteMapping("/{id}")
     public void deleteUser(@PathVariable("id") int id) {
         userService.deleteById(id);
     }
 
+    @PostMapping("/login")
+    public Users loginUser(@RequestBody LoginBody loginBody) throws RecordNotFoundException {
+        return userService.loginUser(loginBody);
+    }
 }
 

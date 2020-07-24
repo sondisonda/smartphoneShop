@@ -1,5 +1,6 @@
 package com.smartphoneShop.backend.service.implementation;
 
+import com.smartphoneShop.backend.dao.body.LoginBody;
 import com.smartphoneShop.backend.dao.entity.Users;
 import com.smartphoneShop.backend.exception.RecordNotFoundException;
 import com.smartphoneShop.backend.repository.UserRepository;
@@ -55,23 +56,22 @@ public class UserServiceImpl implements UserService {
         return usersRepository.save(users);
     }
 
-    @Override
-    public Users loginUser(String userName, String password) throws RecordNotFoundException {
+    public Users loginUser(LoginBody loginBody) throws RecordNotFoundException{
+        Users foundUser = null;
         try {
-//            poczytaj o streamch
-            for (Users users : usersRepository.findAll()) {
-//                equals!!!!! to nie JS/TS
-                if (users.getUserName().equals(userName) && users.getPassword().equals(password)) {
-                    return usersRepository.findById(users.getId()).orElseThrow(() -> new RecordNotFoundException(message));
+            for(Users user: usersRepository.findAll()) {
+                if (user.getUserName().equals(loginBody.getUserName()) && user.getPassword().equals(loginBody.getPassword())) {
+                    foundUser = usersRepository.findById(user.getId()).orElseThrow(() -> new RecordNotFoundException(message));
                 }
             }
-// Zbyt ogólny
+
+//        trochę ogólny exception
         } catch (Exception e) {
             throw new RecordNotFoundException(message);
         }
-//        wtf?
-        return null;
+        return foundUser;
     }
+
 
 
 }
