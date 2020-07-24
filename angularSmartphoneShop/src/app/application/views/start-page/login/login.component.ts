@@ -19,7 +19,7 @@ export class LoginComponent {
   private logged = false;
   private userName = '';
   private password = '';
-  private loginWarn: '';
+  private loginWarn = ' ';
   private loginForm: FormGroup;
   private signedUser: Users;
 

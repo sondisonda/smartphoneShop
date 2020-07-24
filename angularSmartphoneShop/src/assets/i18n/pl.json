@@ -10,10 +10,16 @@
         "EDIT": "Edytuj",
         "CLOSE": "Zamknij",
         "SAVE": "Zapisz",
+        "ORDER": "Zamówienie",
+        "PROFILE": "Profil",
+        "STORE": "Sklep",
+        "USERS": "Użytkownicy",
+        "ORDERS": "Zamówienia",
+        "SMARTPHONES": "Smartphony",
         "LANGUAGE": "Język",
         "LANG_EN": "Angielski",
         "LANG_PL": "Polski",
-        "COMMON_ERROR":{
+        "COMMON_ERROR": {
             "FIELD_REQUIRED": "Pole wymagane"
         }
 
