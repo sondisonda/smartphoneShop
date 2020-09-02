@@ -1,3 +1,4 @@
 # smartphoneShop
 
-My first project in spring with postgresql
+CRUD web app written usingSpring Boot, Angular and PostgreSQL
+
